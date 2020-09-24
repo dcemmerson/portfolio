@@ -9,12 +9,12 @@ type InputProps = React.DetailedHTMLProps<
 interface Props extends InputProps {
   id: string;
   label: string;
+  isSelected: boolean;
   className?: string;
-  isSelected?: boolean;
 }
 
 export const Radio = memo(
-  ({ id, label, className, isSelected, ...restOf }: Props) => {
+  ({ id, label, isSelected, className, ...restOf }: Props) => {
     return (
       <Wrapper className={className}>
         <input type="radio" id={id} checked={isSelected} {...restOf} />

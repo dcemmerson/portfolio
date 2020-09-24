@@ -8,10 +8,8 @@ import { Helmet } from 'react-helmet-async';
 import HomePageSaga from './saga';
 
 import { Title } from 'styles/StyleComponents';
-import { Navbar } from 'app/containers/Navbar';
-import { ThemeSwitch } from '../ThemeSwitch';
 
-export function HomePage() {
+export function Portfolio() {
   const dispatch = useDispatch();
   useInjectReducer({ key: sliceKey, reducer: reducer });
   useInjectSaga({ key: sliceKey, saga: HomePageSaga });
@@ -29,9 +27,7 @@ export function HomePage() {
         <meta name="description" content="Dane Emmerson" />
       </Helmet>
       <span>
-        <Navbar id="" labels={[]} />
         <Title> HomePage container</Title>
-        <ThemeSwitch />
       </span>
     </>
   );
