@@ -8,10 +8,10 @@ import { Helmet } from 'react-helmet-async';
 import HomePageSaga from './saga';
 
 import { Navbar, PageType } from 'app/containers/Navbar';
-import { FullPageComponent } from 'app/components/FullPageComponent';
-import { HomeBody } from 'app/components/Home';
 
-export function HomePage() {
+import { FullPageComponent } from 'app/components/FullPageComponent';
+
+export function PortfolioPage() {
   const dispatch = useDispatch();
   useInjectReducer({ key: sliceKey, reducer: reducer });
   useInjectSaga({ key: sliceKey, saga: HomePageSaga });
@@ -29,8 +29,8 @@ export function HomePage() {
         <meta name="description" content="Dane Emmerson" />
       </Helmet>
       <FullPageComponent
-        Header={<Navbar id="" labels={[]} pageType={PageType.Home} />}
-        Body={<HomeBody />}
+        Header={<Navbar id="" labels={[]} pageType={PageType.Portfolio} />}
+        Body={<div>' abra bra'</div>}
         Footer={<div>footer</div>}
       />
     </>

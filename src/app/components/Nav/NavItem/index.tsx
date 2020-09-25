@@ -29,5 +29,16 @@ export const NavItem = (props: Props) => {
 };
 
 const Wrapper = styled.div`
-  color: ${p => p.theme.text};
+  li a {
+    color: ${p => p.theme.textSecondary} !important;
+    transition: 0.4s;
+  }
+  li.active a {
+    color: ${p => p.theme.text} !important;
+    transition: 0.4s;
+  }
+  li:hover a {
+    color: ${p => p.theme.textAccent} !important;
+    transition: 0.3s;
+  }
 `;

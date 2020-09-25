@@ -1,8 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
-import 'styles/scss/custom.scss';
-import { NavItem } from '../../components/NavItem';
+import { NavItem } from 'app/components/Nav/NavItem';
+import { NavTitle } from 'app/components/Nav/NavTitle';
+import { ThemeSwitch } from '../ThemeSwitch';
+
+export enum PageType {
+  Home,
+  Portfolio,
+  About,
+  NotFound,
+}
 
 type InputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -12,15 +19,14 @@ type InputProps = React.DetailedHTMLProps<
 interface Props extends InputProps {
   id: string;
   labels: Array<string>;
+  pageType: PageType;
 }
 
 export const Navbar = (props: Props) => {
   return (
     <Wrapper>
       <nav className="navbar navbar-expand-lg navbar-light bg-light mx-lg-5 mx-md-4 mx-sm-2 pt-3">
-        <a className="navbar-brand" href="#">
-          Dane Emmerson
-        </a>
+        <NavTitle label="Dane Emmerson" to="/" />
         <button
           className="navbar-toggler"
           type="button"
@@ -39,9 +45,22 @@ export const Navbar = (props: Props) => {
         >
           <span>
             <ul className="navbar-nav mr-auto">
-              <NavItem to="/" label="Home" active={true} />
-              <NavItem to="/portfolio" label="Portfolio" active={false} />
-              <NavItem to="/about" label="About" active={false} />
+              <NavItem
+                to="/"
+                label="Home"
+                active={props.pageType === PageType.Home}
+              />
+              <NavItem
+                to="/portfolio"
+                label="Portfolio"
+                active={props.pageType === PageType.Portfolio}
+              />
+              <NavItem
+                to="/about"
+                label="About"
+                active={props.pageType === PageType.About}
+              />
+              <ThemeSwitch />
             </ul>
           </span>
         </div>
@@ -52,4 +71,8 @@ export const Navbar = (props: Props) => {
 
 const Wrapper = styled.div`
   color: ${p => p.theme.text};
+  nav {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-bottom: 1px solid ${p => p.theme.border};
+  }
 `;

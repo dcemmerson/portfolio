@@ -1,4 +1,3 @@
-import { Radio } from 'app/components/Radio';
 import { ToggleSwitch } from 'app/components/ToggleSwitch';
 
 import React from 'react';
@@ -20,42 +19,13 @@ export function ThemeSwitch() {
 
   return (
     <Wrapper>
-      <Themes>
-        <ToggleSwitch
-          id="Toggle"
-          label="Toggle Theme"
-          onChange={handleThemeChange}
-          isChecked={theme === 'dark'}
-          value={theme === 'dark' ? 'light' : 'dark'}
-        />
-        {/* <Radio
-        id="system"
-        label="System theme"
-        className="radio"
-        name="theme"
+      <ToggleSwitch
+        id="Toggle"
+        label="Toggle Theme"
         onChange={handleThemeChange}
-        value="system"
-        isSelected={theme === 'system'}
+        isChecked={theme === 'dark'}
+        value={theme === 'dark' ? 'light' : 'dark'}
       />
-      <Radio
-        id="light"
-        label="Light"
-        className="radio"
-        name="theme"
-        onChange={handleThemeChange}
-        value="light"
-        isSelected={theme === 'light'}
-      />
-      <Radio
-        id="dark"
-        label="Dark"
-        className="radio"
-        name="theme"
-        onChange={handleThemeChange}
-        value="dark"
-        isSelected={theme === 'dark'}
-      /> */}
-      </Themes>
     </Wrapper>
   );
 }
@@ -63,12 +33,5 @@ export function ThemeSwitch() {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
-const Themes = styled.div`
-  display: flex;
-
-  .radio {
-    margin-right: 1.5rem;
-  }
+  justify-content: center;
 `;

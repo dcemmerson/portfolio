@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import styled from 'styled-components/macro';
+import { IoMdSunny, IoMdMoon } from 'react-icons/io';
 
 type InputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -20,6 +21,8 @@ export const ToggleSwitch = memo(
         <label className="switch">
           <input type="checkbox" id={id} checked={isChecked} {...restOf} />
           <span className="slider round"></span>
+          <IoMdSunny className="sun" />
+          <IoMdMoon className="moon" />
         </label>
       </Wrapper>
     );
@@ -30,55 +33,94 @@ const Wrapper = styled.div`
   label {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 50px;
+    height: 26px;
   }
   input {
     opacity: 0;
     width: 0;
     height: 0;
   }
-  span {
+  .slider {
     position: absolute;
     cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #4d4d4d;
     -webkit-transition: 0.4s;
     transition: 0.4s;
-  }
-  span:before {
-    position: absolute;
-    content: '';
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-  }
-  input:checked span {
-    background-color: #2196f3;
+    &:before {
+      z-index: 2;
+      position: absolute;
+      content: '';
+      height: 20px;
+      width: 20px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
   }
 
-  input:focus span {
-    box-shadow: 0 0 1px #2196f3;
+  input + .slider:before {
+    background-color: #eee;
   }
-  input:checked + span:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+
+  input:focus + .slider:before {
+    box-shadow: 0 0 6px 3px ${p => p.theme.accent};
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(23px);
+    -ms-transform: translateX(23px);
+    transform: translateX(23px);
+  }
+
+  .moon {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    left: 4px;
+    top: 2.8px;
+    z-index: 1;
+  }
+  input:not(:checked) ~ .moon {
+    transform: translateY(100%);
+    transition: 0.25s ease-in;
+    color: rgba(0, 0, 0, 0);
+  }
+  input:checked ~ .moon {
+    transform: translateY(0px);
+    transition: 0.25s ease-out;
+    color: #ffd783;
+  }
+  .sun {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 4px;
+    top: 2.8px;
+    z-index: 1;
+  }
+  input:checked ~ .sun {
+    transform: translateY(100%);
+    transition: 0.25s ease-in;
+    color: rgba(0, 0, 0, 0);
+  }
+  input:not(:checked) ~ .sun {
+    transform: translateY(0px);
+    transition: 0.25s ease-out;
+    color: #ffcc4d;
   }
 
   /* Rounded sliders */
-  span {
-    border-radius: 34px;
+  .slider {
+    border-radius: 26px;
   }
 
-  span:before {
+  .slider::before {
     border-radius: 50%;
   }
 `;
