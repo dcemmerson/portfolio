@@ -3,7 +3,6 @@ import { ThemeProvider as OriginalThemeProvider } from 'styled-components';
 import { useSelector } from 'react-redux';
 import { selectTheme, themeSliceKey, reducer } from './slice';
 import { useInjectReducer } from 'redux-injectors';
-import { themes } from './themes';
 
 export const ThemeProvider = (props: { children: React.ReactChild }) => {
   useInjectReducer({ key: themeSliceKey, reducer: reducer });

@@ -29,6 +29,7 @@ export const NavItem = (props: Props) => {
 };
 
 const Wrapper = styled.div`
+  font-size: 1.2rem;
   li a {
     color: ${p => p.theme.textSecondary} !important;
     transition: 0.4s;

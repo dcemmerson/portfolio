@@ -10,6 +10,7 @@ import HomePageSaga from './saga';
 import { Navbar, PageType } from 'app/containers/Navbar';
 import { FullPageComponent } from 'app/components/FullPageComponent';
 import { HomeBody } from 'app/components/Home';
+import { Footer } from '../Footer';
 
 export function HomePage() {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ export function HomePage() {
       <FullPageComponent
         Header={<Navbar id="" labels={[]} pageType={PageType.Home} />}
         Body={<HomeBody />}
-        Footer={<div>footer</div>}
+        Footer={<Footer id="" />}
       />
     </>
   );

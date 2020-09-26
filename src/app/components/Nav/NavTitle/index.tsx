@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
 
 type InputProps = React.DetailedHTMLProps<
@@ -15,9 +16,9 @@ interface Props extends InputProps {
 export const NavTitle = (props: Props) => {
   return (
     <Wrapper>
-      <a className="navbar-brand" href="#">
+      <Link className="navbar-brand" to="/">
         Dane Emmerson
-      </a>
+      </Link>
     </Wrapper>
   );
 };
@@ -26,6 +27,7 @@ const Wrapper = styled.div`
   a {
     color: ${p => p.theme.textSecondary} !important;
     transition: 0.4s;
+    font-size: 1.4rem;
   }
   a:hover {
     color: ${p => p.theme.textAccent} !important;

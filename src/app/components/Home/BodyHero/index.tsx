@@ -4,12 +4,12 @@ import inca_trail from 'assets/inca_trail.jpg';
 
 export const HomeBodyHero = () => {
   return (
-    <div className="container py-lg-5 py-md-4 py-sm-2">
+    <div className="container py-lg-5 py-md-4 pt-2 pb-4">
       <div className="row">
         <ImageWrapper>
           <img src={inca_trail} alt="Inca trail" />
           <ImageTextWrapper>
-            <span>Greetings. I'm Dane, a software developer.</span>
+            <h1>Greetings. I'm Dane, a software developer.</h1>
           </ImageTextWrapper>
         </ImageWrapper>
       </div>
@@ -22,11 +22,19 @@ const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   img {
+    filter: grayscale(40%);
     width: 100%;
     opacity: 0.5;
     transition: 0.4s;
     position: relative;
     border-radius: 3px;
+    // animation-name: fadeImageIn;
+    // animation-duration: 100s;
+    // animation-iteration-count: 1;
+  }
+  img:hover {
+    filter: grayscale(0%);
+    transition: 1s;
   }
 `;
 const ImageTextWrapper = styled.div`
@@ -37,14 +45,25 @@ const ImageTextWrapper = styled.div`
 
   @media only screen and (max-width: 600px) {
     top: 20%;
-    font-size: 30px;
+    h1 {
+      font-size: 30px !important;
+    }
   }
   @media only screen and (min-width: 600px) {
     top: 25%;
-    font-size: 36px;
+    h1 {
+      font-size: 36px !important;
+    }
   }
   @media (min-width: 992px) {
     top: 40%;
-    font-size: 40px;
+    h1 {
+      font-size: 40px !important;
+    }
   }
+  // @keyframes fadeImageIn {
+  //   from {opacity: 0;}
+  //   to {opacity: 0.5;}
+  // }
 `;
+// export default HomeBodyHero;

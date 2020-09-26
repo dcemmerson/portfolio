@@ -22,11 +22,11 @@ export const FullPageComponent = (props: Props) => {
 };
 
 const Wrapper = styled.div`
+  overflow-x: hidden;
   width: 100vw;
   position: static;
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: ${p => p.theme.background};
   transition: 0.4s;
 `;

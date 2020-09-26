@@ -70,9 +70,8 @@ export const Navbar = (props: Props) => {
 };
 
 const Wrapper = styled.div`
-  color: ${p => p.theme.text};
   nav {
     background-color: rgba(0, 0, 0, 0) !important;
-    border-bottom: 1px solid ${p => p.theme.border};
+    border-bottom: 1px solid ${p => p.theme.borderSecondary};
   }
 `;

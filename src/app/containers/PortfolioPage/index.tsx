@@ -10,6 +10,8 @@ import HomePageSaga from './saga';
 import { Navbar, PageType } from 'app/containers/Navbar';
 
 import { FullPageComponent } from 'app/components/FullPageComponent';
+import { Footer } from '../Footer';
+import { Portfolio } from 'app/components/Portfolio';
 
 export function PortfolioPage() {
   const dispatch = useDispatch();
@@ -30,8 +32,8 @@ export function PortfolioPage() {
       </Helmet>
       <FullPageComponent
         Header={<Navbar id="" labels={[]} pageType={PageType.Portfolio} />}
-        Body={<div>' abra bra'</div>}
-        Footer={<div>footer</div>}
+        Body={<Portfolio />}
+        Footer={<Footer id="" />}
       />
     </>
   );

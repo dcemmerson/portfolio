@@ -6,7 +6,7 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
-import * as React from 'react';
+import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
@@ -18,8 +18,25 @@ import { PortfolioPage } from './containers/PortfolioPage/Loadable';
 import { AboutPage } from './containers/AboutPage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import styled from 'styled-components/macro';
+import { ThemeContext } from 'styled-components';
 
-export function App() {
+type InputProps = React.DetailedHTMLProps<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+>;
+
+interface Props extends InputProps {
+  // //   id: string;
+  // label: string;
+  // to: string;
+  // active: boolean;
+}
+
+export function App(props: Props) {
+  const theme = useContext(ThemeContext);
+  console.log('theme = ');
+  console.log(theme);
+  const Style = GlobalStyle(theme);
   return (
     <BrowserRouter>
       <Helmet titleTemplate="%s - dcemmerson" defaultTitle="React Boilerplate">
@@ -27,8 +44,8 @@ export function App() {
       </Helmet>
       <Wrapper>
         <AnimatedSwitch
-          atEnter={{ opacity: 0.1 }}
-          atLeave={{ opacity: 0.1 }}
+          atEnter={{ opacity: 0 }}
+          atLeave={{ opacity: 0 }}
           atActive={{ opacity: 1 }}
           className="switch-wrapper"
         >
@@ -40,7 +57,7 @@ export function App() {
         </AnimatedSwitch>
       </Wrapper>
 
-      <GlobalStyle />
+      <Style />
     </BrowserRouter>
   );
 }
