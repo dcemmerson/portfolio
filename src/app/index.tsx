@@ -8,8 +8,8 @@
 
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Route, BrowserRouter } from 'react-router-dom';
-import { AnimatedSwitch } from 'react-router-transition';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
+// import { AnimatedSwitch } from 'react-router-transition';
 
 import { GlobalStyle } from 'styles/global-styles';
 
@@ -34,8 +34,7 @@ interface Props extends InputProps {
 
 export function App(props: Props) {
   const theme = useContext(ThemeContext);
-  console.log('theme = ');
-  console.log(theme);
+
   const Style = GlobalStyle(theme);
   return (
     <BrowserRouter>
@@ -43,18 +42,20 @@ export function App(props: Props) {
         <meta name="description" content="Dane Emmerson" />
       </Helmet>
       <Wrapper>
-        <AnimatedSwitch
-          atEnter={{ opacity: 0 }}
-          atLeave={{ opacity: 0 }}
-          atActive={{ opacity: 1 }}
-          className="switch-wrapper"
-        >
+        <Switch>
+          {/* <AnimatedSwitch
+					atEnter={{ opacity: 0 }}
+					atLeave={{ opacity: 0 }}
+					atActive={{ opacity: 1 }}
+					className="switch-wrapper"
+				> */}
           <Route exact path="/" component={HomePage} />
           <Route exact path="/portfolio" component={PortfolioPage} />
           <Route exact path="/about" component={AboutPage} />
           {/* <Route exact path="/portfolio" component={Portfolio} /> */}
           <Route component={NotFoundPage} />
-        </AnimatedSwitch>
+          {/* </AnimatedSwitch> */}
+        </Switch>
       </Wrapper>
 
       <Style />

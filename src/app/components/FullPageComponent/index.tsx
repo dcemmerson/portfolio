@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import PageTransition from 'react-router-page-transition';
 
 type InputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -15,7 +16,7 @@ interface Props extends InputProps {
 
 export const FullPageComponent = (props: Props) => {
   return (
-    <Wrapper id="fullPageComponentRoot">
+    <Wrapper id="fullPageComponentRoot" className={'transition-item'}>
       {props.Header} {props.Body} {props.Footer}
     </Wrapper>
   );

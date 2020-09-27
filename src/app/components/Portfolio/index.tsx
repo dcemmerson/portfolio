@@ -112,9 +112,9 @@ export const Portfolio = () => {
                     >
                       VSFS <FiExternalLink />
                     </a>{' '}
-                    program, I had the invaluable opportunity to work with
-                    several individuals from the US State Department and develop
-                    an account based Node.js web app that monitors COLA (cost of
+                    program, I had the opportunity to work with several
+                    individuals from the US State Department and develop an
+                    account based Node.js web app that monitors COLA (cost of
                     living allowance) rates and provides automated change
                     notification email reports.
                   </div>
