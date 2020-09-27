@@ -19,9 +19,10 @@ import {
 // Update your breakpoints if you want
 export const sizes = {
   small: 600,
-  medium: 1024,
-  large: 1440,
-  xlarge: 1920,
+  medium: 768,
+  large: 1024,
+  xlarge: 1440,
+  // xlarge: 1920,
 };
 
 // Iterate through the sizes and create a media template
@@ -53,10 +54,10 @@ type MediaFunction = <P extends object>(
 
 /* Example
 const SomeDiv = styled.div`
-  display: flex;
-  ....
-  ${media.medium`
-    display: block
-  `}
+	display: flex;
+	....
+	${media.medium`
+		display: block
+	`}
 `;
 */

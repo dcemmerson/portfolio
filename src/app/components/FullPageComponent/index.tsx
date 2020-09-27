@@ -15,7 +15,7 @@ interface Props extends InputProps {
 
 export const FullPageComponent = (props: Props) => {
   return (
-    <Wrapper>
+    <Wrapper id="fullPageComponentRoot">
       {props.Header} {props.Body} {props.Footer}
     </Wrapper>
   );

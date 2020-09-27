@@ -100,12 +100,14 @@ export const GlobalStyle = (theme: Theme) => createGlobalStyle`
 
   p,
   label {
-    // font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
   }
 
   input, select {
     font-family: inherit;
     font-size: inherit;
-  }
+	}
+	.divider {
+		border-bottom: 1px solid ${theme.border};
+	}
 `;

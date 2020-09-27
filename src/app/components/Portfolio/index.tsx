@@ -1,8 +1,6 @@
 import React from 'react';
 import { FiExternalLink } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
-import { HomeBodyHero } from '../Home/BodyHero';
 
 export const Portfolio = () => {
   return (
@@ -54,12 +52,13 @@ export const Portfolio = () => {
                     <div className="skill">JavaScript</div>
                     <div className="skill">TypeScript</div>
                     <div className="skill">Node.js</div>
-                    <div className="skill">ReactJS</div>
+                    <div className="skill">React.js</div>
                     <div className="skill">Dart</div>
                     <div className="skill">Flutter</div>
                     <div className="skill">Java</div>
                     <div className="skill">Python</div>
                     <div className="skill">SQL and NoSQL</div>
+                    <div className="skill">Serverless</div>
                     <div className="skill">HTML</div>
                     <div className="skill">CSS</div>
                   </div>
@@ -132,6 +131,47 @@ export const Portfolio = () => {
                   </div>
                 </div>
               </div>
+              <div className="divider mx-3"></div>
+              <div className="pt-4 pb-2">
+                <h2>The Past</h2>
+                <div className="pt-2 pb-4">
+                  <div className="mb-3">
+                    <h3 className="mb-1">
+                      <strong>Sierra Pacific Industries</strong>
+                    </h3>
+                    <span className="text">
+                      Process Engineer - 2015 to 2017
+                    </span>
+                  </div>
+                  <div className="ml-3 ml-md-4">
+                    <div className="text">abra cadabra</div>
+                  </div>
+                </div>
+                <div className="pt-2 pb-4">
+                  <div className="mb-3">
+                    <h3 className="mb-1">
+                      <strong>Illumina, Inc</strong>
+                    </h3>
+                    <span className="text">
+                      Research Associate - 2013 to 2015
+                    </span>
+                  </div>
+                  <div className="ml-3 ml-md-4">
+                    <div className="text">Thro</div>
+                  </div>
+                </div>
+                <div className="pt-2 pb-4">
+                  <div className="mb-3">
+                    <h3 className="mb-1">
+                      <strong>Genentech, Inc</strong>
+                    </h3>
+                    <span className="text">Intern - 2009 to 2012</span>
+                  </div>
+                  <div className="ml-3 ml-md-4">
+                    <div className="text">Thro</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -141,10 +181,6 @@ export const Portfolio = () => {
 };
 
 const Wrapper = styled.div`
-  .divider {
-    border-bottom: 1px solid ${p => p.theme.border};
-  }
-
   @media (max-width: 600px) {
     .sm {
       font-size: 0.75rem !important;
