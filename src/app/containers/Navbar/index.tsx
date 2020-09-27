@@ -43,9 +43,12 @@ export const Navbar = (props: Props) => {
 
       const nav = document.getElementById('visibleNavbar');
       if (prevScrollYPos > currScrollYPos && nav) {
-        console.log('aaa');
         nav.style.top = '0';
-      } else if (currScrollYPos > prevScrollYPos && nav) {
+      } else if (
+        nav &&
+        currScrollYPos > nav.clientHeight * 1.5 &&
+        currScrollYPos > prevScrollYPos
+      ) {
         nav.style.top = `-${nav.clientHeight}px`;
       }
       prevScrollYPos = currScrollYPos;
@@ -59,7 +62,7 @@ export const Navbar = (props: Props) => {
         className="row justify-content-around mx-lg-5 mx-md-4 mx-sm-2 pt-3"
         id="visibleNavbar"
       >
-        <div className="col-12 col-md-5 justify-content-between justify-content-md-start d-flex">
+        <div className="col-12 col-md-5 justify-content-between justify-content-md-start d-flex px-4 px-md-2">
           <NavTitle label="Dane Emmerson" to="/" />
           <span id="themeSwitch__small">
             <ThemeSwitch />
@@ -145,6 +148,9 @@ const Wrapper = styled.div`
 	ul {
 		display: flex;
 		flex-direction: row;
+	}
+	#themeSwitch__large, #themeSwitch__small {
+		align-self: center;
 	}
 	@media (max-width: 768px) {
 		#themeSwitch__large {
