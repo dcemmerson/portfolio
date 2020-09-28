@@ -71,6 +71,13 @@ export const Navbar = (props: Props) => {
 
   // return document.removeEventListener('wheel', _handleScroll);
 
+  function updateCurrentPageType(pageTypeSelected: PageType) {
+    if (pageTypeSelected !== pageType) {
+      setPageType(pageTypeSelected);
+    } else {
+    }
+  }
+
   return (
     <Wrapper>
       <nav
@@ -91,21 +98,21 @@ export const Navbar = (props: Props) => {
                 label="Home"
                 // @ts-ignore
                 active={getPageType() === PageType.Home}
-                onClick={() => setPageType(PageType.Home)}
+                onClick={() => updateCurrentPageType(PageType.Home)}
               />
               <NavItem
                 to="/portfolio"
                 label="Portfolio"
                 // @ts-ignore
                 active={getPageType() === PageType.Portfolio}
-                onClick={() => setPageType(PageType.Portfolio)}
+                onClick={() => updateCurrentPageType(PageType.Portfolio)}
               />
               <NavItem
                 to="/about"
                 label="About"
                 // @ts-ignore
                 active={getPageType() === PageType.About}
-                onClick={() => setPageType(PageType.About)}
+                onClick={() => updateCurrentPageType(PageType.About)}
               />
               <span id="themeSwitch__large">
                 <ThemeSwitch />
