@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 // import styled from 'styled-components/macro';
 import { HomeBodyHero } from './BodyHero';
 import { HomeBodyText } from './BodyText';
@@ -18,9 +18,7 @@ interface Props extends InputProps {
 export const HomeBody = (props: Props) => {
   return (
     <div className={props.class}>
-      {/* <Suspense fallback={<div>Loading...</div>}> */}
       <HomeBodyHero />
-      {/* </Suspense> */}
       <HomeBodyText />
     </div>
   );
