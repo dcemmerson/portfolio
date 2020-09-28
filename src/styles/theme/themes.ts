@@ -10,7 +10,6 @@ const lightTheme = {
   borderLight: 'rgba(58,52,51,0.05)',
   accent: 'rgba(70, 146, 245, 1)',
   navbarBackgroundColor: 'rgba(255, 255, 255, 0.8)',
-  // accent: '#2491ff',
 };
 
 const darkTheme: Theme = {
@@ -26,7 +25,6 @@ const darkTheme: Theme = {
   borderLight: 'rgba(241,233,231,0.05)',
   accent: 'rgba(70, 146, 245, 1)',
   navbarBackgroundColor: 'rgba(15, 15, 16, 0.85)',
-  // accent: '#2491ff',
 };
 
 export type Theme = typeof lightTheme;

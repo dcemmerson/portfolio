@@ -22,12 +22,6 @@ export const About = (props: Props) => {
             <div className="pt-4 pb-2">
               {/* <h2>Education</h2> */}
               <div className="py-2">
-                {/* <div className="d-flex">
-									<h3>
-										<strong>Oregon State University</strong>
-									</h3>
-									<span className="ml-2 text">(2018 to present)</span>
-								</div> */}
                 <div className="ml-3 ml-md-4">
                   <div className="text">
                     <p>

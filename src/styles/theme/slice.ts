@@ -32,12 +32,23 @@ export const selectTheme = createSelector(
 export const selectThemeKey = createSelector(
   [
     (state: RootState) => {
-      console.log('state = ');
-      console.log(state);
       return state.theme || initialState;
     },
   ],
   theme => theme.selected,
+);
+
+export const isThemeDark = createSelector(
+  [
+    (state: RootState) => {
+      return state.theme || initialState;
+    },
+  ],
+  theme => {
+    if (theme.selected === 'light' || theme.selected === 'dark') {
+      return theme.selected === 'dark';
+    } else return isSystemDark || false;
+  },
 );
 
 export const { changeTheme } = themeSlice.actions;
