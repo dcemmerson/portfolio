@@ -8,15 +8,15 @@ type InputProps = React.DetailedHTMLProps<
 >;
 
 interface Props extends InputProps {
-  //   id: string;
   label: string;
   to: string;
+  onClick: () => void;
 }
 
 export const NavTitle = (props: Props) => {
   return (
     <Wrapper>
-      <Link className="navbar-brand" to="/">
+      <Link className="navbar-brand" to="/" onClick={props.onClick}>
         Dane Emmerson
       </Link>
     </Wrapper>
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
     font-size: 1.4rem;
   }
   a:hover {
-    color: ${p => p.theme.textAccent} !important;
+    color: ${p => p.theme.accent} !important;
     transition: 0.3s;
   }
 `;

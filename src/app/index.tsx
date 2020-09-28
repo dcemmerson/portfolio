@@ -37,12 +37,12 @@ export function App() {
               <TransitionGroup>
                 <CSSTransition
                   key={location.key}
-                  timeout={150}
+                  timeout={300}
                   classNames="fade"
                 >
                   <Switch location={location}>
                     <Route exact path="/" component={HomePage} />
-                    <Route exact path="/portfolio" component={PortfolioPage} />
+                    <Route exact path="/resume" component={PortfolioPage} />
                     <Route exact path="/about" component={AboutPage} />
                     <Route component={NotFoundPage} />
                   </Switch>
@@ -85,6 +85,6 @@ const Wrapper = styled.div`
     transform: translate(0, 10%);
     clip: rect(0, 100vw, 90vh, 0);
     opacity: 0;
-    transition: opacity 150ms ease-out, transform 150ms, clip 150ms;
+    transition: opacity 250 ease-out, transform 250, clip 250;
   }
 `;

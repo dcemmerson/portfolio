@@ -18,8 +18,10 @@ export const Portfolio = (props: Props) => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-9">
-            <h1 className="py-3 py-md-4 py-lg-5">Portfolio: 2018 - Present</h1>
-            <div className="divider"></div>
+            <h1 className="pt-5 pb-3 pb-md-4 py-lg-5">
+              Resume: 2018 - Present
+            </h1>
+            <div className="divider mx-4 mx-lg-2"></div>
             <div className="pt-4 pb-2">
               <h2>Education</h2>
               <div className="py-2">
@@ -50,7 +52,7 @@ export const Portfolio = (props: Props) => {
                 </div>
               </div>
             </div>
-            <div className="divider mx-3"></div>
+            <div className="divider mx-4 mx-lg-2"></div>
             <div className="pt-4 pb-2">
               <h2>Skills</h2>
               <div className="row py-2 ">
@@ -66,7 +68,6 @@ export const Portfolio = (props: Props) => {
                     <div className="skill">Dart</div>
                     <div className="skill">Flutter</div>
                     <div className="skill">Java</div>
-                    <div className="skill">Python</div>
                     <div className="skill">SQL and NoSQL</div>
                     <div className="skill">Serverless</div>
                     <div className="skill">HTML</div>
@@ -82,7 +83,7 @@ export const Portfolio = (props: Props) => {
                 </div>
               </div>
             </div>
-            <div className="divider mx-3"></div>
+            <div className="divider mx-4 mx-lg-2"></div>
             <div className="pt-4 pb-2">
               <h2>Experience</h2>
               <div className="pt-2 pb-4">
@@ -99,9 +100,10 @@ export const Portfolio = (props: Props) => {
                     I love teaching others to code. Through Oregon State
                     University, I have had the opportunity to assist in teaching
                     introductory level programming courses to undergraduates.
-                    Not only have I been able to assist students learning to
-                    code, but this experience has been invaluable in making me a
-                    better programmer.
+                    Not only have I been able to make a positive impact on
+                    students learning to code, but this experience has made me a
+                    better programmer by improving my communication skills among
+                    peers.
                   </div>
                 </div>
               </div>
@@ -141,7 +143,7 @@ export const Portfolio = (props: Props) => {
                   </div>
                 </div>
               </div>
-              <div className="divider mx-3"></div>
+              <div className="divider mx-4 mx-lg-2"></div>
               <div className="pt-4 pb-2">
                 <h2>The Past</h2>
                 <div className="pt-2 pb-4">
@@ -153,9 +155,9 @@ export const Portfolio = (props: Props) => {
                       Process Engineer - 2015 to 2017
                     </span>
                   </div>
-                  <div className="ml-3 ml-md-4">
+                  {/* <div className="ml-3 ml-md-4">
                     <div className="text">abra cadabra</div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="pt-2 pb-4">
                   <div className="mb-3">
@@ -166,9 +168,9 @@ export const Portfolio = (props: Props) => {
                       Research Associate - 2013 to 2015
                     </span>
                   </div>
-                  <div className="ml-3 ml-md-4">
+                  {/* <div className="ml-3 ml-md-4">
                     <div className="text">Thro</div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="pt-2 pb-4">
                   <div className="mb-3">
@@ -177,9 +179,9 @@ export const Portfolio = (props: Props) => {
                     </h3>
                     <span className="text">Intern - 2009 to 2012</span>
                   </div>
-                  <div className="ml-3 ml-md-4">
+                  {/* <div className="ml-3 ml-md-4">
                     <div className="text">Thro</div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

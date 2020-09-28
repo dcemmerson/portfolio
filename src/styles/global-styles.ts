@@ -108,6 +108,6 @@ export const GlobalStyle = (theme: Theme) => createGlobalStyle`
     font-size: inherit;
 	}
 	.divider {
-		border-bottom: 1px solid ${theme.border};
+		border-bottom: 1px solid ${theme.borderSecondary};
 	}
 `;

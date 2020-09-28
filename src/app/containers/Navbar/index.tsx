@@ -31,7 +31,7 @@ export const Navbar = (props: Props) => {
     switch (window.location.pathname.toLowerCase()) {
       case '/':
         return PageType.Home;
-      case '/portfolio':
+      case '/resume':
         return PageType.Portfolio;
       case '/about':
         return PageType.About;
@@ -39,37 +39,6 @@ export const Navbar = (props: Props) => {
         return PageType.NotFound;
     }
   }
-  // let navbarInProgress: boolean = false;
-  // const body = document.getElementsByTagName('body')[0];
-  // let prevScrollYPos: number = body.scrollTop;
-
-  // useEffect(() => {
-  // 	body.addEventListener('scroll', _handleScroll);
-  // 	// return body.removeEventListener('scroll', _handleScroll);
-  // 	function _handleScroll() {
-  // 		if (!navbarInProgress) {
-  // 			navbarInProgress = true;
-
-  // 			const currScrollYPos: number = body.scrollTop;
-  // 			console.log(currScrollYPos);
-
-  // 			const nav = document.getElementById('visibleNavbar');
-  // 			if (prevScrollYPos > currScrollYPos && nav) {
-  // 				nav.style.top = '0';
-  // 			} else if (
-  // 				nav &&
-  // 				currScrollYPos > nav.clientHeight * 1.5 &&
-  // 				currScrollYPos > prevScrollYPos
-  // 			) {
-  // 				nav.style.top = `-${nav.clientHeight}px`;
-  // 			}
-  // 			prevScrollYPos = currScrollYPos;
-  // 			setTimeout(() => (navbarInProgress = false), 200);
-  // 		}
-  // 	}
-  // }, []);
-
-  // return document.removeEventListener('wheel', _handleScroll);
 
   function updateCurrentPageType(pageTypeSelected: PageType) {
     if (pageTypeSelected !== pageType) {
@@ -81,11 +50,15 @@ export const Navbar = (props: Props) => {
   return (
     <Wrapper>
       <nav
-        className="row justify-content-around mx-lg-5 mx-md-4 mx-sm-2 pt-3 "
+        className="row justify-content-around mx-lg-5 mx-md-4 mx-2 pt-3"
         id={props.visible ? 'visible' : 'invisible'}
       >
         <div className="col-12 col-md-5 justify-content-between justify-content-md-start d-flex px-4 px-md-2">
-          <NavTitle label="Dane Emmerson" to="/" />
+          <NavTitle
+            label="Dane Emmerson"
+            to="/"
+            onClick={() => updateCurrentPageType(PageType.Home)}
+          />
           <span id="themeSwitch__small">
             <ThemeSwitch />
           </span>
@@ -96,21 +69,18 @@ export const Navbar = (props: Props) => {
               <NavItem
                 to="/"
                 label="Home"
-                // @ts-ignore
                 active={getPageType() === PageType.Home}
                 onClick={() => updateCurrentPageType(PageType.Home)}
               />
               <NavItem
-                to="/portfolio"
-                label="Portfolio"
-                // @ts-ignore
+                to="/resume"
+                label="Resume"
                 active={getPageType() === PageType.Portfolio}
                 onClick={() => updateCurrentPageType(PageType.Portfolio)}
               />
               <NavItem
                 to="/about"
                 label="About"
-                // @ts-ignore
                 active={getPageType() === PageType.About}
                 onClick={() => updateCurrentPageType(PageType.About)}
               />
@@ -134,13 +104,12 @@ const Wrapper = styled.div`\
 #invisible {
 	visibility: hidden;
 }
-// 	z-index: 100;
 	nav {
-		// position: fixed;
 		left: 0;
 		right: 0;
+		max-width: 100vw;
 		background-color: ${p => p.theme.navbarBackgroundColor};
-		border-bottom: 1px solid ${p => p.theme.borderSecondary};
+		border-bottom: 1px solid ${p => p.theme.border};
 		transition: top 0.4s;
 	}
 	ul {
@@ -150,10 +119,12 @@ const Wrapper = styled.div`\
 	#themeSwitch__large, #themeSwitch__small {
 		align-self: center;
 	}
+
 	@media (max-width: 768px) {
 		#themeSwitch__large {
 			display: none;
 		}
+
 	}
 	@media (min-width: 768px) {
 		#themeSwitch__small {

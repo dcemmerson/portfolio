@@ -17,7 +17,7 @@ export const About = (props: Props) => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-9">
-            <h1 className="py-3 py-md-4 py-lg-5">About Me</h1>
+            <h1 className="pt-5 pb-3 pb-md-4 py-lg-5">About Me</h1>
             <div className="divider"></div>
             <div className="pt-4 pb-2">
               {/* <h2>Education</h2> */}
@@ -47,7 +47,7 @@ export const About = (props: Props) => {
                       attraction towards mobile and web development. Recently I
                       have particularly enjoyed mobile development with Dart and
                       the Flutter framework, and web development with the
-                      React.js library. Current projects.
+                      React.js library.
                     </p>
                   </div>
                 </div>

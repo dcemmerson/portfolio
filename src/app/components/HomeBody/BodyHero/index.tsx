@@ -4,7 +4,7 @@ import inca_trail from 'assets/inca_trail.jpg';
 
 export const HomeBodyHero = () => {
   return (
-    <div className="container py-lg-5 py-md-4 pt-2 pb-4">
+    <div className="container pt-5 pb-3 pb-md-4 py-lg-5">
       <div className="row">
         <ImageWrapper>
           <img src={inca_trail} alt="Inca trail" />
@@ -28,9 +28,7 @@ const ImageWrapper = styled.div`
     transition: 0.4s;
     position: relative;
     border-radius: 3px;
-    // animation-name: fadeImageIn;
-    // animation-duration: 100s;
-    // animation-iteration-count: 1;
+    height: 100%;
   }
   img:hover {
     filter: grayscale(0%);

@@ -10,6 +10,7 @@ import { Navbar, PageType } from 'app/containers/Navbar';
 
 import { FullPageComponent } from 'app/components/FullPageComponent';
 import { About } from 'app/components/About';
+import { Footer } from '../Footer';
 
 export function AboutPage() {
   return (
@@ -21,7 +22,7 @@ export function AboutPage() {
       <FullPageComponent
         Header={<Navbar id="" labels={[]} pageType={PageType.About} />}
         Body={<About />}
-        Footer={<div>footer</div>}
+        Footer={<Footer id="" />}
       />
     </>
   );

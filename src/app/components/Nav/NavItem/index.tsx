@@ -47,8 +47,8 @@ const Wrapper = styled.div`
     color: ${p => p.theme.text} !important;
     transition: 0.4s;
   }
-  li:hover a {
-    color: ${p => p.theme.textAccent} !important;
+  li:not(.active):hover a {
+    color: ${p => p.theme.accent} !important;
     transition: 0.3s;
   }
 `;
