@@ -3,6 +3,8 @@ import styled from 'styled-components/macro';
 import inca_trail from 'assets/inca_trail.jpg';
 
 export const HomeBodyHero = () => {
+  console.log('homebodyhero render2');
+  console.log(Date.now());
   return (
     <div className="container pt-5 pb-3 pb-md-4 py-lg-5">
       <div className="row">
@@ -21,6 +23,7 @@ const ImageWrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  z-index: 0;
   img {
     filter: grayscale(40%);
     width: 100%;
@@ -40,6 +43,7 @@ const ImageTextWrapper = styled.div`
   position: absolute;
   color: ${p => p.theme.textSecondary};
   transition: 0.4s;
+  z-index: 2;
 
   @media only screen and (max-width: 600px) {
     top: 20%;

@@ -14,7 +14,7 @@ export const FooterBody = memo(() => {
         <div className="row">
           <div className="col-md-4 col-sm-6 col-xs-12 d-flex justify-content-center">
             <p>
-              <a href="mailto:dcemmerson@gmail.com">dcemmerson@gmail.com</a>
+              <a href="mailto:dane@daneemmerson.com">dane@daneemmerson.com</a>
             </p>
           </div>
           <div className="col-md-4 col-sm-6 col-xs-12 d-flex justify-content-center">
