@@ -9,7 +9,7 @@ import HomePageSaga from './saga';
 
 import { Navbar, PageType } from 'app/containers/Navbar';
 import { FullPageComponent } from 'app/components/FullPageComponent';
-import { HomeBody } from 'app/components/Home';
+import { HomeBody } from 'app/components/HomeBody';
 import { Footer } from '../Footer';
 
 export function HomePage() {

@@ -8,18 +8,19 @@ type InputProps = React.DetailedHTMLProps<
   HTMLInputElement
 >;
 
-interface Props extends InputProps {
+interface Props {
   //   id: string;
   label: string;
   to: string;
   active: boolean;
+  onClick: () => void;
 }
 
 export const NavItem = (props: Props) => {
   return (
     <Wrapper>
       <li className={props.active ? 'nav-item active' : 'nav-item'}>
-        <Link className="nav-link" to={props.to}>
+        <Link className="nav-link" to={props.to} onClick={props.onClick}>
           {props.label}
           {props.active ? <span className="sr-only">(current)</span> : <></>}
         </Link>

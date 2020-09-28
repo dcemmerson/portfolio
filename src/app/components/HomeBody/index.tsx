@@ -5,9 +5,19 @@ import { HomeBodyText } from './BodyText';
 
 // const HomeBodyHero = lazy(() => import('./BodyHero'));
 
-export const HomeBody = () => {
+type InputProps = React.DetailedHTMLProps<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+>;
+
+interface Props extends InputProps {
+  id?: string;
+  class?: string;
+}
+
+export const HomeBody = (props: Props) => {
   return (
-    <div>
+    <div className={props.class}>
       {/* <Suspense fallback={<div>Loading...</div>}> */}
       <HomeBodyHero />
       {/* </Suspense> */}

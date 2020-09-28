@@ -9,30 +9,18 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
-// import { AnimatedSwitch } from 'react-router-transition';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import styled from 'styled-components/macro';
+import { ThemeContext } from 'styled-components';
 
 import { GlobalStyle } from 'styles/global-styles';
-
 import { HomePage } from './containers/HomePage/Loadable';
 import { PortfolioPage } from './containers/PortfolioPage/Loadable';
 import { AboutPage } from './containers/AboutPage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
-import styled from 'styled-components/macro';
-import { ThemeContext } from 'styled-components';
+import { Navbar, PageType } from './containers/Navbar';
 
-type InputProps = React.DetailedHTMLProps<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  HTMLInputElement
->;
-
-interface Props extends InputProps {
-  // //   id: string;
-  // label: string;
-  // to: string;
-  // active: boolean;
-}
-
-export function App(props: Props) {
+export function App() {
   const theme = useContext(ThemeContext);
 
   const Style = GlobalStyle(theme);
@@ -42,20 +30,27 @@ export function App(props: Props) {
         <meta name="description" content="Dane Emmerson" />
       </Helmet>
       <Wrapper>
-        <Switch>
-          {/* <AnimatedSwitch
-					atEnter={{ opacity: 0 }}
-					atLeave={{ opacity: 0 }}
-					atActive={{ opacity: 1 }}
-					className="switch-wrapper"
-				> */}
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/portfolio" component={PortfolioPage} />
-          <Route exact path="/about" component={AboutPage} />
-          {/* <Route exact path="/portfolio" component={Portfolio} /> */}
-          <Route component={NotFoundPage} />
-          {/* </AnimatedSwitch> */}
-        </Switch>
+        <Navbar pageType={PageType.NotFound} visible={true} />
+        <Route
+          render={({ location }) => {
+            return (
+              <TransitionGroup>
+                <CSSTransition
+                  key={location.key}
+                  timeout={150}
+                  classNames="fade"
+                >
+                  <Switch location={location}>
+                    <Route exact path="/" component={HomePage} />
+                    <Route exact path="/portfolio" component={PortfolioPage} />
+                    <Route exact path="/about" component={AboutPage} />
+                    <Route component={NotFoundPage} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            );
+          }}
+        ></Route>
       </Wrapper>
 
       <Style />
@@ -64,11 +59,32 @@ export function App(props: Props) {
 }
 
 const Wrapper = styled.div`
-  .switch-wrapper {
-    position: relative;
+  .fullPageComponentRoot {
+    position: absolute;
+    left: 0;
+    right: 0;
   }
 
-  .switch-wrapper > div {
-    position: absolute;
+  .fade-enter {
+    opacity: 0;
+    z-index: 1;
+  }
+  .fade-appear {
+    opacity: 0;
+  }
+  .fade-appear-active,
+  .fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms linear 100ms;
+  }
+  .fade-exit {
+    // overflow: hidden;
+    opacity: 1;
+  }
+  .fade-exit.fade-exit-active {
+    transform: translate(0, 10%);
+    clip: rect(0, 100vw, 90vh, 0);
+    opacity: 0;
+    transition: opacity 150ms ease-out, transform 150ms, clip 150ms;
   }
 `;

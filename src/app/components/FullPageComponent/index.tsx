@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import PageTransition from 'react-router-page-transition';
 
 type InputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -16,7 +15,7 @@ interface Props extends InputProps {
 
 export const FullPageComponent = (props: Props) => {
   return (
-    <Wrapper id="fullPageComponentRoot" className={'transition-item'}>
+    <Wrapper className="fullPageComponentRoot">
       {props.Header} {props.Body} {props.Footer}
     </Wrapper>
   );
@@ -25,9 +24,10 @@ export const FullPageComponent = (props: Props) => {
 const Wrapper = styled.div`
   overflow-x: hidden;
   width: 100vw;
-  position: static;
+  // position: static;
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   transition: 0.4s;
+  overflow: auto;
 `;

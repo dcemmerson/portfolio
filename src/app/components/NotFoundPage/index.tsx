@@ -12,7 +12,6 @@ export function NotFoundPage() {
         <title>404 Page Not Found</title>
         <meta name="description" content="Page not found" />
       </Helmet>
-      {/* <Wrapper> */}
       <FullPageComponent
         Header={<Navbar id="" labels={[]} pageType={PageType.NotFound} />}
         Body={
@@ -29,7 +28,6 @@ export function NotFoundPage() {
         }
         Footer={<div>footer</div>}
       />
-      {/* </Wrapper> */}
     </>
   );
 }

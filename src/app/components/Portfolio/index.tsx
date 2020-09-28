@@ -2,9 +2,19 @@ import React from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 import styled from 'styled-components/macro';
 
-export const Portfolio = () => {
+type InputProps = React.DetailedHTMLProps<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+>;
+
+interface Props extends InputProps {
+  id?: string;
+  class?: string;
+}
+
+export const Portfolio = (props: Props) => {
   return (
-    <Wrapper>
+    <Wrapper className={props.class}>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-9">

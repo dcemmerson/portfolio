@@ -1,9 +1,19 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-export const About = () => {
+type InputProps = React.DetailedHTMLProps<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+>;
+
+interface Props extends InputProps {
+  id?: string;
+  class?: string;
+}
+
+export const About = (props: Props) => {
   return (
-    <Wrapper>
+    <Wrapper className={props.class}>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-9">
