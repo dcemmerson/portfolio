@@ -1,33 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components/macro';
 import inca_trail from 'assets/inca_trail.jpg';
 
-export const HomeBodyHero = () => {
-  const [isLoaded, setLoaded] = useState(false);
-  const placeHolder = (
-    <ImageTextWrapper>
-      <h1>Hello. I'm Dane, a software developer.</h1>;
-    </ImageTextWrapper>
-  );
-
+const HeroImage = () => {
   return (
-    <div className="container pt-5 pb-3 pb-md-4 py-lg-5">
-      <div className="row">
-        {!isLoaded && placeHolder}
-        <div>
-          <ImageWrapper>
-            <img
-              src={inca_trail}
-              alt="Inca trail"
-              onLoad={() => setLoaded(true)}
-            />
-            <ImageTextWrapper>
-              <h1>Hello. I'm Dane, a software developer.</h1>
-            </ImageTextWrapper>
-          </ImageWrapper>
-        </div>
-      </div>
-    </div>
+    <ImageWrapper>
+      <img src={inca_trail} alt="Inca trail" />
+      <ImageTextWrapper>
+        <h1>Hello. I'm Dane, a software developer.</h1>
+      </ImageTextWrapper>
+    </ImageWrapper>
   );
 };
 
@@ -50,15 +32,14 @@ const ImageWrapper = styled.div`
     transition: 1s;
   }
 `;
+
 const ImageTextWrapper = styled.div`
   text-align: center;
-
+  position: absolute;
   color: ${p => p.theme.textSecondary};
   transition: 0.4s;
   z-index: 2;
-  img + & {
-    position: absolute;
-  }
+
   @media only screen and (max-width: 600px) {
     top: 20%;
     h1 {
@@ -82,4 +63,5 @@ const ImageTextWrapper = styled.div`
   //   to {opacity: 0.5;}
   // }
 `;
-// export default HomeBodyHero;
+
+export default HeroImage;
