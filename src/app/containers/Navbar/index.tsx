@@ -1,9 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components/macro';
 import { NavItem } from 'app/components/Nav/NavItem';
 import { NavTitle } from 'app/components/Nav/NavTitle';
 import { ThemeSwitch } from '../ThemeSwitch';
-import { PageTypeContext } from 'page_type/PageTypeProvider';
 import { useDispatch, useSelector } from 'react-redux';
 import { changePage, selectPage } from 'page_type/slice';
 import { PageType } from 'page_type/PageTypes';
