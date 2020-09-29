@@ -6,7 +6,7 @@ export const HomeBodyHero = () => {
   const [isLoaded, setLoaded] = useState(false);
   const placeHolder = (
     <ImageTextWrapper>
-      <h1>Hello. I'm Dane, a software developer.</h1>;
+      <h1>Hello. I'm Dane, a software developer.</h1>
     </ImageTextWrapper>
   );
 
@@ -14,18 +14,18 @@ export const HomeBodyHero = () => {
     <div className="container pt-5 pb-3 pb-md-4 py-lg-5">
       <div className="row">
         {!isLoaded && placeHolder}
-        <div>
-          <ImageWrapper>
-            <img
-              src={inca_trail}
-              alt="Inca trail"
-              onLoad={() => setLoaded(true)}
-            />
-            <ImageTextWrapper>
-              <h1>Hello. I'm Dane, a software developer.</h1>
-            </ImageTextWrapper>
-          </ImageWrapper>
-        </div>
+        <ImageWrapper>
+          <img
+            src={inca_trail}
+            alt="Inca trail"
+            onLoad={() => setLoaded(true)}
+          />
+          <ImageTextWrapper>
+            <h1 className={!isLoaded ? 'hidden' : ''}>
+              Hello. I'm Dane, a software developer.
+            </h1>
+          </ImageTextWrapper>
+        </ImageWrapper>
       </div>
     </div>
   );
@@ -58,6 +58,9 @@ const ImageTextWrapper = styled.div`
   z-index: 2;
   img + & {
     position: absolute;
+  }
+  .hidden {
+    display: none;
   }
   @media only screen and (max-width: 600px) {
     top: 20%;
