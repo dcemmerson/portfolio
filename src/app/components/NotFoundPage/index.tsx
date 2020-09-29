@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { Navbar } from 'app/containers/Navbar';
 import { FullPageComponent } from '../FullPageComponent';
 import { PageType } from 'page_type/PageTypes';
+import { Footer } from 'app/containers/Footer';
 
 export function NotFoundPage() {
   return (
@@ -16,18 +17,24 @@ export function NotFoundPage() {
       <FullPageComponent
         Header={<Navbar id="" labels={[]} pageType={PageType.NotFound} />}
         Body={
-          <div>
-            <Title>
-              4
-              <span role="img" aria-label="Crying Face">
-                😢
-              </span>
-              4
-            </Title>
-            <P>Page not found.</P>
+          <div className="container">
+            <div className="row align-items-center pt-5">
+              <div className="col d-flex justify-content-center">
+                <div className="">
+                  <Title>
+                    4
+                    <span role="img" aria-label="Crying Face">
+                      😢
+                    </span>
+                    4
+                  </Title>
+                  <P>Page not found.</P>
+                </div>
+              </div>
+            </div>
           </div>
         }
-        Footer={<div>footer</div>}
+        Footer={<Footer id="" />}
       />
     </>
   );
@@ -45,8 +52,9 @@ export function NotFoundPage() {
 const Title = styled.div`
   // margin-top: -8vh;
   font-weight: bold;
-  color: black;
+  // color: black;
   font-size: 3.375rem;
+  align-items: justify-content-center;
 
   span {
     font-size: 3.125rem;
