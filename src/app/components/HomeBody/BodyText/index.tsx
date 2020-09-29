@@ -3,17 +3,11 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { FiExternalLink } from 'react-icons/fi';
 import { PageType } from 'page_type/PageTypes';
-import { changePage, selectPage } from 'page_type/slice';
-import { useDispatch, useSelector } from 'react-redux';
+import { changePage } from 'page_type/slice';
+import { useDispatch } from 'react-redux';
 
 export const HomeBodyText = () => {
-  const selectedPageType = useSelector(selectPage);
   const dispatch = useDispatch();
-
-  const handlePageChange = (pageType: PageType) => {
-    // const value = event.target.value as SelectedPageType;
-    dispatch(changePage(pageType));
-  };
 
   return (
     <div className="container">
