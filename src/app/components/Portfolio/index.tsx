@@ -25,30 +25,38 @@ export const Portfolio = (props: Props) => {
             <div className="pt-4 pb-2">
               <h2>Education</h2>
               <div className="py-2">
-                <div className="d-flex align-items-center">
-                  <h3>
-                    <strong>Oregon State University</strong>
-                  </h3>
-                  <span className="ml-2 sm pb-1 pb-md-2">
-                    (2018 to present)
-                  </span>
+                <div className="row">
+                  <div className="col-12 col-md-7 col-lg-6 col-xl-5">
+                    <h3 className="mb-0 mb-md-2">
+                      <strong>Oregon State University</strong>
+                    </h3>
+                  </div>
+
+                  <div className="col-12 col-md-5 col-lg-6 col-xl-7 align-content-center d-flex">
+                    <span className="sm">(2018 to present)</span>
+                  </div>
                 </div>
                 <div className="ml-3 ml-md-4">
-                  <div className="text">
+                  <div className="text-md">
                     Bachelor of Science, Computer Science
                   </div>
                   <div className="sm">Expected Graduation: December 2020</div>
                 </div>
               </div>
               <div className="py-3">
-                <div className="d-flex align-items-center">
-                  <h3>
-                    <strong>University of California, Davis</strong>
-                  </h3>
-                  <span className="ml-2 sm pb-1 pb-md-2">(2008-2012)</span>
+                <div className="row">
+                  <div className="col-12 col-md-7 col-lg-6 col-xl-5">
+                    <h3 className="mb-0 mb-md-2">
+                      <strong>University of California, Davis</strong>
+                    </h3>
+                  </div>
+
+                  <div className="col-12 col-md-5 col-lg-6 col-xl-7 align-content-center d-flex">
+                    <span className="sm">(2008 to 2012)</span>
+                  </div>
                 </div>
                 <div className="ml-3 ml-md-4">
-                  <div className="text">
+                  <div className="text-md">
                     Bachelor of Science, Chemical Engineering
                   </div>
                 </div>
@@ -202,6 +210,9 @@ const Wrapper = styled.div`
     .text {
       font-size: 1rem !important;
     }
+    .text-md {
+      font-size: 0.9rem !important;
+    }
     .skill {
       font-size: 1rem;
     }
@@ -212,6 +223,9 @@ const Wrapper = styled.div`
     }
 
     .text {
+      font-size: 1.1rem !important;
+    }
+    .text-md {
       font-size: 1.1rem !important;
     }
     .skill {
@@ -225,6 +239,9 @@ const Wrapper = styled.div`
     .text {
       font-size: 1.2rem !important;
     }
+    .text-md {
+      font-size: 1.2rem !important;
+    }
     .skill {
       font-size: 1rem;
     }
@@ -234,6 +251,9 @@ const Wrapper = styled.div`
       font-size: 0.9rem !important;
     }
     .text {
+      font-size: 1.2rem !important;
+    }
+    .text-md {
       font-size: 1.2rem !important;
     }
     .skill {
