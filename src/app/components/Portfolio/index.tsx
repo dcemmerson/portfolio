@@ -25,11 +25,13 @@ export const Portfolio = (props: Props) => {
             <div className="pt-4 pb-2">
               <h2>Education</h2>
               <div className="py-2">
-                <div className="d-flex">
+                <div className="d-flex align-items-center">
                   <h3>
                     <strong>Oregon State University</strong>
                   </h3>
-                  <span className="ml-2 text">(2018 to present)</span>
+                  <span className="ml-2 sm pb-1 pb-md-2">
+                    (2018 to present)
+                  </span>
                 </div>
                 <div className="ml-3 ml-md-4">
                   <div className="text">
@@ -39,11 +41,11 @@ export const Portfolio = (props: Props) => {
                 </div>
               </div>
               <div className="py-3">
-                <div className="d-flex">
+                <div className="d-flex align-items-center">
                   <h3>
                     <strong>University of California, Davis</strong>
                   </h3>
-                  <span className="ml-2 text">(2008-2012)</span>
+                  <span className="ml-2 sm pb-1 pb-md-2">(2008-2012)</span>
                 </div>
                 <div className="ml-3 ml-md-4">
                   <div className="text">
@@ -102,8 +104,8 @@ export const Portfolio = (props: Props) => {
                     introductory level programming courses to undergraduates.
                     Not only have I been able to make a positive impact on
                     students learning to code, but this experience has made me a
-                    better programmer by improving my communication skills among
-                    peers.
+                    better programmer by making me a more effective communicator
+                    among peers.
                   </div>
                 </div>
               </div>

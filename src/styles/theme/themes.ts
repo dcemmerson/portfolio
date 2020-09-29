@@ -9,6 +9,7 @@ const lightTheme = {
   borderSecondary: 'rgba(58,52,51,0.22)',
   borderLight: 'rgba(58,52,51,0.05)',
   accent: 'rgba(70, 146, 245, 1)',
+  accentHover: 'rgba(70, 146, 245, 0.6)',
   navbarBackgroundColor: 'rgba(255, 255, 255, 0.8)',
 };
 
@@ -24,6 +25,7 @@ const darkTheme: Theme = {
   borderSecondary: 'rgba(241,233,231,0.15)',
   borderLight: 'rgba(241,233,231,0.05)',
   accent: 'rgba(70, 146, 245, 1)',
+  accentHover: 'rgba(70, 146, 245, 0.6)',
   navbarBackgroundColor: 'rgba(15, 15, 16, 0.85)',
 };
 

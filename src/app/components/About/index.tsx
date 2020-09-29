@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import { FiExternalLink } from 'react-icons/fi';
+import { changePage } from 'page_type/slice';
+import { useDispatch } from 'react-redux';
+import { PageType } from 'page_type/PageTypes';
+import { Link } from 'react-router-dom';
 
 type InputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -13,6 +17,8 @@ interface Props extends InputProps {
 }
 
 export const About = (props: Props) => {
+  const dispatch = useDispatch();
+
   return (
     <Wrapper className={props.class}>
       <div className="container">
@@ -21,7 +27,6 @@ export const About = (props: Props) => {
             <h1 className="pt-5 pb-3 pb-md-4 py-lg-5">About Me</h1>
             <div className="divider"></div>
             <div className="pt-4 pb-2">
-              {/* <h2>Education</h2> */}
               <div className="py-2">
                 <div className="ml-3 ml-md-4">
                   <div className="text">
@@ -56,7 +61,7 @@ export const About = (props: Props) => {
                       >
                         Flutter <FiExternalLink />
                       </a>{' '}
-                      Flutter framework, and web development with the{' '}
+                      SDK, and web development with the{' '}
                       <a
                         href="https://reactjs.org/"
                         target="_blank"
@@ -65,6 +70,18 @@ export const About = (props: Props) => {
                         React.js <FiExternalLink />
                       </a>{' '}
                       library.
+                    </p>
+                    <p>
+                      These days, in addition to my coursework and teaching
+                      responsibilities at Oregon State University, I am working
+                      on building a mobile app,{' '}
+                      <Link
+                        to={PageType.MyTie}
+                        onClick={() => dispatch(changePage(PageType.MyTie))}
+                      >
+                        {' '}
+                        MyTie.
+                      </Link>
                     </p>
                   </div>
                 </div>

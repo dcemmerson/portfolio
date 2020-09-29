@@ -23,7 +23,13 @@ export const GlobalStyle = (theme: Theme) => createGlobalStyle`
 
   a {
     color: ${theme.accent} !important;
-  }
+	}
+	a:hover {
+		color: ${theme.accentHover} !important;
+		text-decoration: none;
+		transition: color 0.25s;
+
+	}
   
 	@media (max-width: 600px) {
 		h1 {

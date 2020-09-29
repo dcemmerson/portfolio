@@ -15,7 +15,7 @@ export function NotFoundPage() {
         <meta name="description" content="Page not found" />
       </Helmet>
       <FullPageComponent
-        Header={<Navbar id="" labels={[]} pageType={PageType.NotFound} />}
+        Header={<Navbar id="" />}
         Body={
           <div className="container">
             <div className="row align-items-center pt-5">

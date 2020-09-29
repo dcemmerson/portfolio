@@ -3,15 +3,13 @@ import styled from 'styled-components/macro';
 import inca_trail from 'assets/inca_trail.jpg';
 
 export const HomeBodyHero = () => {
-  console.log('homebodyhero render2');
-  console.log(Date.now());
   return (
     <div className="container pt-5 pb-3 pb-md-4 py-lg-5">
       <div className="row">
         <ImageWrapper>
           <img src={inca_trail} alt="Inca trail" />
           <ImageTextWrapper>
-            <h1>Greetings. I'm Dane, a software developer.</h1>
+            <h1>Hello. I'm Dane, a software developer.</h1>
           </ImageTextWrapper>
         </ImageWrapper>
       </div>

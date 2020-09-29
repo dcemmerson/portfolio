@@ -17,7 +17,7 @@ export function AboutPage() {
         <meta name="description" content="Dane Emmerson" />
       </Helmet>
       <FullPageComponent
-        Header={<Navbar id="" labels={[]} pageType={PageType.About} />}
+        Header={<Navbar id="" />}
         Body={<About />}
         Footer={<Footer id="" />}
       />

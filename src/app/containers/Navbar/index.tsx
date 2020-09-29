@@ -22,7 +22,7 @@ type InputProps = React.DetailedHTMLProps<
 interface Props extends InputProps {
   id?: string;
   labels?: Array<string>;
-  pageType: PageType;
+  // pageType: PageType;
   visible?: boolean;
 }
 

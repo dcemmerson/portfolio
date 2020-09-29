@@ -17,7 +17,7 @@ export function PortfolioPage() {
         <meta name="description" content="Dane Emmerson" />
       </Helmet>
       <FullPageComponent
-        Header={<Navbar id="" labels={[]} pageType={PageType.Resume} />}
+        Header={<Navbar id="" />}
         Body={<Portfolio />}
         Footer={<Footer id="" />}
       />

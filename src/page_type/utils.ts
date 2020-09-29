@@ -9,6 +9,8 @@ export function getSelectedPageFromWindow(): SelectedPageType {
       return PageType.About;
     case PageType.Resume:
       return PageType.Resume;
+    case PageType.MyTie:
+      return PageType.MyTie;
     default:
       return PageType.NotFound;
   }

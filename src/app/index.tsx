@@ -19,7 +19,7 @@ import { PortfolioPage } from './containers/PortfolioPage/Loadable';
 import { AboutPage } from './containers/AboutPage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { Navbar } from './containers/Navbar';
-import { PageType } from 'page_type/PageTypes';
+import { MyTiePage } from './containers/MyTiePage';
 
 export function App() {
   const theme = useContext(ThemeContext);
@@ -31,7 +31,7 @@ export function App() {
         <meta name="description" content="Dane Emmerson" />
       </Helmet>
       <Wrapper>
-        <Navbar pageType={PageType.NotFound} visible={true} />
+        <Navbar visible={true} />
         <Route
           render={({ location }) => {
             return (
@@ -45,6 +45,7 @@ export function App() {
                     <Route exact path="/" component={HomePage} />
                     <Route exact path="/resume" component={PortfolioPage} />
                     <Route exact path="/about" component={AboutPage} />
+                    <Route exact path="/MyTie" component={MyTiePage} />
                     <Route component={NotFoundPage} />
                   </Switch>
                 </CSSTransition>
