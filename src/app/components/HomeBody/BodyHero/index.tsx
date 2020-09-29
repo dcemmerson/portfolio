@@ -39,15 +39,25 @@ const ImageWrapper = styled.div`
   img {
     filter: grayscale(40%);
     width: 100%;
-    opacity: 0.5;
-    transition: 0.4s;
+    opacity: 0;
     position: relative;
     border-radius: 3px;
     height: 100%;
+    animation-name: transitionOpacity;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
   }
   img:hover {
     filter: grayscale(0%);
-    transition: 1s;
+    transition: filter 1s;
+  }
+  @keyframes transitionOpacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
   }
 `;
 const ImageTextWrapper = styled.div`
