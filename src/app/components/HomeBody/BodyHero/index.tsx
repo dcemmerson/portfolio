@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
+// import inca_trail from 'assets/inca_trail.jpg';
+import { isMobile } from 'react-device-detect';
 import inca_trail from 'assets/inca_trail.jpg';
+import inca_trail_mobile from 'assets/inca_trail_mobile.jpg';
 
 export const HomeBodyHero = () => {
   const [isLoaded, setLoaded] = useState(false);
@@ -9,15 +12,19 @@ export const HomeBodyHero = () => {
       <h1>Hello. I'm Dane, a software developer.</h1>
     </ImageTextWrapper>
   );
-
+  console.log('isMobile = ' + isMobile);
+  console.log('hq = ');
+  console.log(inca_trail);
+  console.log('lq');
+  console.log(inca_trail_mobile);
   return (
     <div className="container pt-5 pb-3 pb-md-4 py-lg-5">
       <div className="row">
         {!isLoaded && placeHolder}
         <ImageWrapper>
           <img
-            src={inca_trail}
-            alt="Inca trail"
+            src={isMobile ? inca_trail_mobile : inca_trail}
+            alt={isLoaded ? 'Inca trail' : ''}
             onLoad={() => setLoaded(true)}
           />
           <ImageTextWrapper>
