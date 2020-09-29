@@ -1,4 +1,3 @@
-import { PageTypeContext } from './PageTypeProvider';
 import { PageType } from './PageTypes';
 import { SelectedPageType } from './types';
 
