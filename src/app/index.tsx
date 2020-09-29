@@ -18,7 +18,8 @@ import { HomePage } from './containers/HomePage/Loadable';
 import { PortfolioPage } from './containers/PortfolioPage/Loadable';
 import { AboutPage } from './containers/AboutPage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
-import { Navbar, PageType } from './containers/Navbar';
+import { Navbar } from './containers/Navbar';
+import { PageType } from 'page_type/PageTypes';
 
 export function App() {
   const theme = useContext(ThemeContext);

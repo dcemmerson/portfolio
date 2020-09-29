@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styled from 'styled-components/macro';
 import { NavItem } from 'app/components/Nav/NavItem';
 import { NavTitle } from 'app/components/Nav/NavTitle';
 import { ThemeSwitch } from '../ThemeSwitch';
+import { PageTypeContext } from 'page_type/PageTypeProvider';
+import { useDispatch, useSelector } from 'react-redux';
+import { changePage, selectPage } from 'page_type/slice';
+import { PageType } from 'page_type/PageTypes';
 
-export enum PageType {
-  Home = '/',
-  Portfolio = '/portfolio',
-  About = '/about',
-  NotFound = '/undefined',
-}
+// export enum PageType {
+//   Home = '/',
+//   Portfolio = '/portfolio',
+//   About = '/about',
+//   NotFound = '/undefined',
+// }
 
 type InputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -24,28 +28,14 @@ interface Props extends InputProps {
 }
 
 export const Navbar = (props: Props) => {
-  // const [pageType, setPageType]: [PageType, Function] = useState(PageType.Home);
-  const [pageType, setPageType] = useState(getPageType());
+  // const theme = useContext(PageTypeContext);
+  const selectedPageType = useSelector(selectPage);
+  const dispatch = useDispatch();
 
-  function getPageType(): PageType {
-    switch (window.location.pathname.toLowerCase()) {
-      case '/':
-        return PageType.Home;
-      case '/resume':
-        return PageType.Portfolio;
-      case '/about':
-        return PageType.About;
-      default:
-        return PageType.NotFound;
-    }
-  }
-
-  function updateCurrentPageType(pageTypeSelected: PageType) {
-    if (pageTypeSelected !== pageType) {
-      setPageType(pageTypeSelected);
-    } else {
-    }
-  }
+  const handlePageChange = (pageType: PageType) => {
+    // const value = event.target.value as SelectedPageType;
+    dispatch(changePage(pageType));
+  };
 
   return (
     <Wrapper>
@@ -57,7 +47,7 @@ export const Navbar = (props: Props) => {
           <NavTitle
             label="Dane Emmerson"
             to="/"
-            onClick={() => updateCurrentPageType(PageType.Home)}
+            onClick={() => handlePageChange(PageType.Home)}
           />
           <span id="themeSwitch__small">
             <ThemeSwitch />
@@ -69,20 +59,20 @@ export const Navbar = (props: Props) => {
               <NavItem
                 to="/"
                 label="Home"
-                active={getPageType() === PageType.Home}
-                onClick={() => updateCurrentPageType(PageType.Home)}
+                active={selectedPageType.selected === PageType.Home}
+                onClick={() => handlePageChange(PageType.Home)}
               />
               <NavItem
                 to="/resume"
                 label="Resume"
-                active={getPageType() === PageType.Portfolio}
-                onClick={() => updateCurrentPageType(PageType.Portfolio)}
+                active={selectedPageType.selected === PageType.Resume}
+                onClick={() => handlePageChange(PageType.Resume)}
               />
               <NavItem
                 to="/about"
                 label="About"
-                active={getPageType() === PageType.About}
-                onClick={() => updateCurrentPageType(PageType.About)}
+                active={selectedPageType.selected === PageType.About}
+                onClick={() => handlePageChange(PageType.About)}
               />
               <span id="themeSwitch__large">
                 <ThemeSwitch />

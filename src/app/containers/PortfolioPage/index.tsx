@@ -2,11 +2,12 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
-import { Navbar, PageType } from 'app/containers/Navbar';
+import { Navbar } from 'app/containers/Navbar';
 
 import { FullPageComponent } from 'app/components/FullPageComponent';
 import { Footer } from '../Footer';
 import { Portfolio } from 'app/components/Portfolio';
+import { PageType } from 'page_type/PageTypes';
 
 export function PortfolioPage() {
   return (
@@ -16,7 +17,7 @@ export function PortfolioPage() {
         <meta name="description" content="Dane Emmerson" />
       </Helmet>
       <FullPageComponent
-        Header={<Navbar id="" labels={[]} pageType={PageType.Portfolio} />}
+        Header={<Navbar id="" labels={[]} pageType={PageType.Resume} />}
         Body={<Portfolio />}
         Footer={<Footer id="" />}
       />

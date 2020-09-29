@@ -21,6 +21,7 @@ import { HelmetProvider } from 'react-helmet-async';
 
 import { configureAppStore } from 'store/configureStore';
 import { ThemeProvider } from 'styles/theme/ThemeProvider';
+import { PageTypeProvider } from 'page_type/PageTypeProvider';
 
 // Initialize languages
 // import './locales/i18n';
@@ -33,13 +34,15 @@ interface Props {
 }
 const ConnectedApp = ({ Component }: Props) => (
   <Provider store={store}>
-    <ThemeProvider>
-      <HelmetProvider>
-        <React.StrictMode>
-          <Component />
-        </React.StrictMode>
-      </HelmetProvider>
-    </ThemeProvider>
+    <PageTypeProvider>
+      <ThemeProvider>
+        <HelmetProvider>
+          <React.StrictMode>
+            <Component />
+          </React.StrictMode>
+        </HelmetProvider>
+      </ThemeProvider>
+    </PageTypeProvider>
   </Provider>
 );
 const render = (Component: typeof App) => {

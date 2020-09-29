@@ -42,10 +42,12 @@ const Wrapper = styled.div`
   li a {
     color: ${p => p.theme.textSecondary} !important;
     transition: 0.4s;
+    font-weight: 400;
   }
   li.active a {
     color: ${p => p.theme.text} !important;
     transition: 0.4s;
+    font-weight: 450;
   }
   li:not(.active):hover a {
     color: ${p => p.theme.accent} !important;

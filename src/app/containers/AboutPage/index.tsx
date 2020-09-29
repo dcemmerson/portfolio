@@ -2,11 +2,12 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
-import { Navbar, PageType } from 'app/containers/Navbar';
+import { Navbar } from 'app/containers/Navbar';
 
 import { FullPageComponent } from 'app/components/FullPageComponent';
 import { About } from 'app/components/About';
 import { Footer } from '../Footer';
+import { PageType } from 'page_type/PageTypes';
 
 export function AboutPage() {
   return (

@@ -1,3 +1,4 @@
+import { PageState } from 'page_type/types';
 // [IMPORT NEW CONTAINERSTATE ABOVE] < Needed for generating containers seamlessly
 
 import { ThemeState } from 'styles/theme/types';
@@ -9,4 +10,5 @@ import { ThemeState } from 'styles/theme/types';
 export interface RootState {
   // [INSERT NEW REDUCER KEY ABOVE] < Needed for generating containers seamlessly
   theme?: ThemeState;
+  page: PageState;
 }

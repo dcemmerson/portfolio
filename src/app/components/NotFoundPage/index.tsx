@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { P } from './P';
 import { Helmet } from 'react-helmet-async';
-import { Navbar, PageType } from 'app/containers/Navbar';
+import { Navbar } from 'app/containers/Navbar';
 import { FullPageComponent } from '../FullPageComponent';
+import { PageType } from 'page_type/PageTypes';
 
 export function NotFoundPage() {
   return (
