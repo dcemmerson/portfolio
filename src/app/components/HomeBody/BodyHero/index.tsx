@@ -5,7 +5,7 @@ import inca_trail from 'assets/inca_trail.jpg';
 export const HomeBodyHero = () => {
   const [isLoaded, setLoaded] = useState(false);
   const placeHolder = (
-    <ImageTextWrapper>
+    <ImageTextWrapper className={isLoaded ? 'hidden' : ''}>
       <h1>Hello. I'm Dane, a software developer.</h1>
     </ImageTextWrapper>
   );
