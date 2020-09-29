@@ -9,7 +9,7 @@ export const HomeBodyText = () => {
       <div className="row justify-content-center">
         <div className="col-12 col-md-10 col-lg-9">
           <TextWrapper>
-            <p>Hi there, thanks for stopping by!</p>
+            <p>Hi there, I'm Dane. Thanks for stopping by!</p>
             <p>
               I enjoy learning about and working on all things software. Please
               take a look at my <Link to="/portfolio">portfolio</Link> and swing

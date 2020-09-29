@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { FiExternalLink } from 'react-icons/fi';
 
 type InputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -39,9 +40,31 @@ export const About = (props: Props) => {
                     <p>
                       While I enjoy software projects of all types, I have an
                       attraction towards mobile and web development. Recently I
-                      have particularly enjoyed mobile development with Dart and
-                      the Flutter framework, and web development with the
-                      React.js library.
+                      have particularly enjoyed mobile development with{' '}
+                      <a
+                        href="https://dart.dev/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Dart <FiExternalLink />
+                      </a>{' '}
+                      and the{' '}
+                      <a
+                        href="https://flutter.dev/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Flutter <FiExternalLink />
+                      </a>{' '}
+                      Flutter framework, and web development with the{' '}
+                      <a
+                        href="https://reactjs.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        React.js <FiExternalLink />
+                      </a>{' '}
+                      library.
                     </p>
                   </div>
                 </div>
