@@ -10,6 +10,6 @@ export function getSelectedPageFromWindow(): SelectedPageType {
     case PageType.Resume:
       return PageType.Resume;
     default:
-      return PageType.Resume;
+      return PageType.NotFound;
   }
 }

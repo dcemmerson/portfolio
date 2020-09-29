@@ -1,9 +1,6 @@
 import { PayloadAction, createSelector, createSlice } from '@reduxjs/toolkit';
 import { RootState } from 'types';
 import { PageState, SelectedPageType } from './types';
-// import { ThemeState, ThemeKeyType } from './types';
-// import { getThemeFromStorage, isSystemDark } from './utils';
-// import { } from './PageTypes';
 import { getSelectedPageFromWindow } from './utils';
 
 export const initialState: PageState = {
