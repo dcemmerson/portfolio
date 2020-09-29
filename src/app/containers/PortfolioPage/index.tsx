@@ -7,7 +7,6 @@ import { Navbar } from 'app/containers/Navbar';
 import { FullPageComponent } from 'app/components/FullPageComponent';
 import { Footer } from '../Footer';
 import { Portfolio } from 'app/components/Portfolio';
-import { PageType } from 'page_type/PageTypes';
 
 export function PortfolioPage() {
   return (
