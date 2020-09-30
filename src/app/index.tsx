@@ -15,6 +15,8 @@ import { ThemeContext } from 'styled-components';
 
 import { GlobalStyle } from 'styles/global-styles';
 
+// For homepage, don't use loadable since this is likely the starting
+// place for most users.
 import { HomePage } from './containers/HomePage';
 import { PortfolioPage } from './containers/PortfolioPage/Loadable';
 import { AboutPage } from './containers/AboutPage/Loadable';
