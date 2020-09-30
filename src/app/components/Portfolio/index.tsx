@@ -31,7 +31,6 @@ export const Portfolio = (props: Props) => {
                       <strong>Oregon State University</strong>
                     </h3>
                   </div>
-
                   <div className="col-12 col-md-5 col-lg-6 col-xl-7 align-content-center d-flex">
                     <span className="sm">(2018 to present)</span>
                   </div>
@@ -87,8 +86,11 @@ export const Portfolio = (props: Props) => {
                 <div className="col-6 d-flex justify-content-center">
                   <div>
                     <h3>
-                      <strong>More...</strong>
+                      <strong>Soft</strong>
                     </h3>
+                    <div className="skill">Effective communication</div>
+                    <div className="skill">Time management</div>
+                    <div className="skill">Teamwork</div>
                   </div>
                 </div>
               </div>
