@@ -14,12 +14,13 @@ import styled from 'styled-components/macro';
 import { ThemeContext } from 'styled-components';
 
 import { GlobalStyle } from 'styles/global-styles';
-import { HomePage } from './containers/HomePage/Loadable';
+
+import { HomePage } from './containers/HomePage';
 import { PortfolioPage } from './containers/PortfolioPage/Loadable';
 import { AboutPage } from './containers/AboutPage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { Navbar } from './containers/Navbar';
-import { MyTiePage } from './containers/MyTiePage';
+import { MyTiePage } from './containers/MyTiePage/Loadable';
 
 export function App() {
   const theme = useContext(ThemeContext);
