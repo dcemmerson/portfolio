@@ -18,11 +18,11 @@ import { GlobalStyle } from 'styles/global-styles';
 // For homepage, don't use loadable since this is likely the starting
 // place for most users.
 import { HomePage } from './containers/HomePage';
-import { PortfolioPage } from './containers/PortfolioPage/Loadable';
-import { AboutPage } from './containers/AboutPage/Loadable';
-import { NotFoundPage } from './components/NotFoundPage/Loadable';
+import { PortfolioPage } from './containers/PortfolioPage';
+import { AboutPage } from './containers/AboutPage';
+import { NotFoundPage } from './components/NotFoundPage';
 import { Navbar } from './containers/Navbar';
-import { MyTiePage } from './containers/MyTiePage/Loadable';
+import { MyTiePage } from './containers/MyTiePage';
 
 export function App() {
   const theme = useContext(ThemeContext);
