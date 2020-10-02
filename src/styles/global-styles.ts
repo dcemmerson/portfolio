@@ -116,4 +116,5 @@ export const GlobalStyle = (theme: Theme) => createGlobalStyle`
 	.divider {
 		border-bottom: 1px solid ${theme.borderSecondary};
 	}
+
 `;
