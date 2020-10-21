@@ -32,8 +32,6 @@ export const HomeBodyHero = () => {
 };
 
 const ImageWrapper = styled.div`
-  left: 0;
-  right: 0;
   position: relative;
   display: flex;
   justify-content: center;
@@ -64,6 +62,8 @@ const ImageWrapper = styled.div`
 `;
 const ImageTextWrapper = styled.div`
   text-align: center;
+  left: 0;
+  right: 0;
 
   color: ${p => p.theme.textSecondary};
   transition: 0.4s;
