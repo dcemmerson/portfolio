@@ -73,15 +73,23 @@ export const About = (props: Props) => {
                     </p>
                     <p>
                       These days, in addition to my coursework and teaching
-                      responsibilities at Oregon State University, I am working
-                      on building a mobile app,{' '}
+                      responsibilities at Oregon State University, I spend the
+                      remainder of my time working on two different mobile apps,{' '}
                       <Link
                         to={PageType.MyTie}
                         onClick={() => dispatch(changePage(PageType.MyTie))}
                       >
                         {' '}
-                        MyTie.
-                      </Link>
+                        MyTie
+                      </Link>{' '}
+                      and the{' '}
+                      <a
+                        href="https://paceapp.net/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Pace App <FiExternalLink />
+                      </a>{' '}
                     </p>
                   </div>
                 </div>
