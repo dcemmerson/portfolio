@@ -34,8 +34,6 @@ const ImageWrapper = styled.div`
 `;
 
 const ImageTextWrapper = styled.div`
-  left: 0;
-  right: 0;
   text-align: center;
   position: absolute;
   color: ${p => p.theme.textSecondary};

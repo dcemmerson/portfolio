@@ -22,7 +22,7 @@ export const HomeBodyHero = () => {
           />
           <ImageTextWrapper>
             <h1 className={!isLoaded ? 'hidden' : ''}>
-              Hello. I'm Dane, a software developer.
+              Hello! I'm Dane, a software developer.
             </h1>
           </ImageTextWrapper>
         </ImageWrapper>
@@ -32,6 +32,8 @@ export const HomeBodyHero = () => {
 };
 
 const ImageWrapper = styled.div`
+  left: 0;
+  right: 0;
   position: relative;
   display: flex;
   justify-content: center;
