@@ -1,6 +1,6 @@
 # About
 
-Repository for my personal website, <a href="daneemmerson.com">daneemmerson.com</a>
+Repository for my personal website, <a href="https://daneemmerson.com">daneemmerson.com</a>
 
 ## Built with...
 
