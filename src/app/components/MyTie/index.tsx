@@ -66,7 +66,7 @@ export const MyTie = (props: Props) => {
                         Firebase <FiExternalLink />
                       </a>
                       , but I hope to release an early version of the app on
-                      Google Play by mid November, 2020.
+                      Google Play by the end of 2020.
                     </p>
                     <p>Updates to come...</p>
                   </div>
