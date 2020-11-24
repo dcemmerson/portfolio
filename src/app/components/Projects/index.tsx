@@ -37,17 +37,17 @@ export const Projects = (props: Props) => {
                 </div>
                 <div>
                   <div className="ml-3 ml-md-4">
-                    <div className="row">
-                      <div className="col-12 col-lg-6">
+                    <div className="row mb-2">
+                      <div className="col-sm-6 col-xs-12">
                         {' '}
                         <em className="secondary subText">
                           August 2020 to present
                         </em>
                       </div>
-                      <div className="col-12 col-lg-6 justify-content-start justify-content-lg-end d-flex align-items-center">
+                      <div className="col-sm-6 col-xs-12 justify-xs-content-start justify-content-sm-end d-flex">
                         <div className="">
                           <a
-                            className="subText"
+                            className="subText text-nowrap"
                             href="https://github.com/dcemmerson/my_tie"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -57,25 +57,31 @@ export const Projects = (props: Props) => {
                         </div>
                       </div>
                     </div>
-                    <p className="">
-                      MyTie is a personal project in which I'm developing an
-                      Android mobile app that allows users to filter and search
-                      fly patterns to tie (for fly fishing) based on materials
-                      the user has on hand. I'm building this project with Dart,
-                      Flutter, and Firebase.
-                    </p>
-                    <p>I plan to release a version on Google Play soon... </p>
-                    <p>
-                      For more, see{' '}
-                      <Link
-                        to={PageType.MyTie}
-                        onClick={() => dispatch(changePage(PageType.MyTie))}
-                      >
-                        {' '}
-                        MyTie
-                      </Link>
-                      .
-                    </p>
+                    <div className="row">
+                      <div className="col">
+                        <p className="">
+                          MyTie is a personal project in which I'm developing an
+                          Android mobile app that allows users to filter and
+                          search fly patterns to tie (for fly fishing) based on
+                          materials the user has on hand. I'm building this
+                          project with Dart, Flutter, and Firebase.
+                        </p>
+                        <p>
+                          I plan to release a version on Google Play soon...{' '}
+                        </p>
+                        <p>
+                          For more, see{' '}
+                          <Link
+                            to={PageType.MyTie}
+                            onClick={() => dispatch(changePage(PageType.MyTie))}
+                          >
+                            {' '}
+                            MyTie
+                          </Link>
+                          .
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -89,17 +95,17 @@ export const Projects = (props: Props) => {
                 </div>
                 <div>
                   <div className="ml-3 ml-md-4">
-                    <div className="row">
-                      <div className="col-12 col-lg-6">
+                    <div className="row mb-2">
+                      <div className="col-sm-6 col-xs-12">
                         {' '}
                         <em className="secondary subText">
                           September 2020 to present
                         </em>
                       </div>
-                      <div className="col-12 col-lg-6 justify-content-start justify-content-lg-end d-flex align-items-center">
+                      <div className="col-sm-6 col-xs-12 justify-xs-content-start justify-content-sm-end d-flex">
                         <div className="">
                           <a
-                            className="subText"
+                            className="subText text-nowrap"
                             href="https://paceapp.net"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -109,33 +115,37 @@ export const Projects = (props: Props) => {
                         </div>
                       </div>
                     </div>
-
-                    <p className="">
-                      I have been working closely with the owner of the Pace App
-                      and one other developer to make various improvements and
-                      bug fixes to the existing iPhone, Apple Watch, and Garmin
-                      Watch versions of the Pace App.
-                    </p>
-                    <p>
-                      Some of my contributions include:
-                      <ul className="">
-                        <li className="">
-                          Resolve bugs in pre-existing iPhone and Apple Watch
-                          code written in Objective-C and Swift
-                        </li>
-                        <li>
-                          Implement additional features, including enabling
-                          Bluetooth communication between Garmin watch and
-                          iPhone versions of the app, as well as allow user
-                          ability to share workouts on third party platforms
-                          such as Strava
-                        </li>
-                      </ul>
-                    </p>
-                    <p className="sm secondary">
-                      Note: Link to source code not available as I signed a
-                      non-disclosure agreement to work on this project.
-                    </p>
+                    <div className="row">
+                      <div className="col">
+                        <p className="">
+                          I have been working closely with the owner of the Pace
+                          App and one other developer to make various
+                          improvements and bug fixes to the existing iPhone,
+                          Apple Watch, and Garmin Watch versions of the Pace
+                          App.
+                        </p>
+                        <p>
+                          Some of my contributions include:
+                          <ul className="">
+                            <li className="">
+                              Resolve bugs in pre-existing iPhone and Apple
+                              Watch code written in Objective-C and Swift
+                            </li>
+                            <li>
+                              Implement additional features, including enabling
+                              Bluetooth communication between Garmin watch and
+                              iPhone versions of the app, as well as allow user
+                              ability to share workouts on third party platforms
+                              such as Strava
+                            </li>
+                          </ul>
+                        </p>
+                        <p className="sm secondary">
+                          Note: Link to source code not available as I signed a
+                          non-disclosure agreement to work on this project.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -151,17 +161,17 @@ export const Projects = (props: Props) => {
                 </div>
                 <div>
                   <div className="ml-3 ml-md-4">
-                    <div className="row">
-                      <div className="col-12 col-lg-6">
+                    <div className="row mb-2">
+                      <div className="col-sm-5 col-xs-12">
                         {' '}
                         <em className="secondary subText">
                           January to June 2020
                         </em>
                       </div>
-                      <div className="col-12 col-lg-6 justify-content-start justify-content-lg-end d-flex align-items-center">
+                      <div className="col-sm-7 col-xs-12 justify-xs-content-start justify-content-sm-end d-flex">
                         <div className="">
                           <a
-                            className="subText"
+                            className="subText text-nowrap"
                             href="https://cola.govapps.us"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -170,7 +180,7 @@ export const Projects = (props: Props) => {
                           </a>
                           <span className="mx-2">|</span>
                           <a
-                            className="subText"
+                            className="subText text-nowrap"
                             href="https://github.com/dcemmerson/cola_project"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -180,55 +190,62 @@ export const Projects = (props: Props) => {
                         </div>
                       </div>
                     </div>
-                    <p>
-                      <a
-                        href="https://cola.govapps.us"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        cola.govapps.us <FiExternalLink />
-                      </a>{' '}
-                      is a Node.js web application built with Handlebars and
-                      MySQL on the back-end, and with VanillaJS and Bootstrap on
-                      the front-end.
-                    </p>
-                    <p className="">
-                      The cost of living allowance (COLA) change notification
-                      system is a project that I worked on with one other intern
-                      from start to finish during my internship with the US
-                      Department of State.
-                    </p>
-
-                    <p className="">
-                      The app includes the following key functionallities:
-                      <ul>
-                        <li>
-                          Detect changes in COLA rates by scraping and parsing{' '}
+                    <div className="row">
+                      <div className="col">
+                        <p>
                           <a
-                            href="https://aoprals.state.gov/Web920/cola.asp"
+                            className="text-nowrap"
+                            href="https://cola.govapps.us"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            aoprals.state.gov
-                            <FiExternalLink />
+                            cola.govapps.us <FiExternalLink />
                           </a>{' '}
-                        </li>
-                        <li>User signup and authentication system</li>
-                        <li>User document upload and management system</li>
-                        <li>Automated email notification system</li>
-                      </ul>
-                    </p>
-                    <p>
-                      For more on this project, please visit{' '}
-                      <a
-                        href="https://cola.govapps.us/about"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        cola.govapps.us/about <FiExternalLink />
-                      </a>
-                      .
-                    </p>
+                          is a Node.js web application built with Handlebars and
+                          MySQL on the back-end, and with VanillaJS and
+                          Bootstrap on the front-end.
+                        </p>
+                        <p className="">
+                          The cost of living allowance (COLA) change
+                          notification system is a project that I worked on with
+                          one other intern from start to finish during my
+                          internship with the US Department of State.
+                        </p>
+
+                        <p className="">
+                          The app includes the following key functionallities:
+                          <ul>
+                            <li>
+                              Detect changes in COLA rates by scraping and
+                              parsing{' '}
+                              <a
+                                className="text-nowrap"
+                                href="https://aoprals.state.gov/Web920/cola.asp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                aoprals.state.gov <FiExternalLink />
+                              </a>{' '}
+                            </li>
+                            <li>User signup and authentication system</li>
+                            <li>User document upload and management system</li>
+                            <li>Automated email notification system</li>
+                          </ul>
+                        </p>
+                        <p>
+                          For more on this project, please visit{' '}
+                          <a
+                            className="text-nowrap"
+                            href="https://cola.govapps.us/about"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            cola.govapps.us/about <FiExternalLink />
+                          </a>
+                          .
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -250,5 +267,16 @@ const Wrapper = styled.div`
   }
   .sm {
     font-size: 75%;
+  }
+
+  @media (max-width: 500px) {
+    .h4 {
+      font-size: 75%;
+    }
+  }
+  @media (min-width: 500px) {
+    .h4 {
+      font-size: 100%;
+    }
   }
 `;
