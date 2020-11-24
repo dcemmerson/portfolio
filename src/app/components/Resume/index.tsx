@@ -12,7 +12,7 @@ interface Props extends InputProps {
   class?: string;
 }
 
-export const Portfolio = (props: Props) => {
+export const Resume = (props: Props) => {
   return (
     <Wrapper className={props.class}>
       <div className="container">

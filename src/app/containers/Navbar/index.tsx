@@ -66,6 +66,12 @@ export const Navbar = (props: Props) => {
                 label="Resume"
                 active={selectedPageType.selected === PageType.Resume}
                 onClick={() => handlePageChange(PageType.Resume)}
+              />{' '}
+              <NavItem
+                to="/projects"
+                label="Projects"
+                active={selectedPageType.selected === PageType.Projects}
+                onClick={() => handlePageChange(PageType.Projects)}
               />
               <NavItem
                 to="/about"

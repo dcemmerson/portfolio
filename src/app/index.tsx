@@ -18,11 +18,12 @@ import { GlobalStyle } from 'styles/global-styles';
 // For homepage, don't use loadable since this is likely the starting
 // place for most users.
 import { HomePage } from './containers/HomePage';
-import { PortfolioPage } from './containers/PortfolioPage/Loadable';
+import { PortfolioPage } from './containers/ResumePage/Loadable';
 import { AboutPage } from './containers/AboutPage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { Navbar } from './containers/Navbar';
 import { MyTiePage } from './containers/MyTiePage/Loadable';
+import { ProjectsPage } from './containers/ProjectsPage';
 
 export function App() {
   const theme = useContext(ThemeContext);
@@ -47,6 +48,7 @@ export function App() {
                   <Switch location={location}>
                     <Route exact path="/" component={HomePage} />
                     <Route exact path="/resume" component={PortfolioPage} />
+                    <Route exact path="/projects" component={ProjectsPage} />
                     <Route exact path="/about" component={AboutPage} />
                     <Route exact path="/MyTie" component={MyTiePage} />
                     <Route component={NotFoundPage} />

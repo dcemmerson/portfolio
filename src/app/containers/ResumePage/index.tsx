@@ -6,7 +6,7 @@ import { Navbar } from 'app/containers/Navbar';
 
 import { FullPageComponent } from 'app/components/FullPageComponent';
 import { Footer } from '../Footer';
-import { Portfolio } from 'app/components/Portfolio';
+import { Resume } from 'app/components/Resume';
 
 export function PortfolioPage() {
   return (
@@ -17,7 +17,7 @@ export function PortfolioPage() {
       </Helmet>
       <FullPageComponent
         Header={<Navbar id="" />}
-        Body={<Portfolio />}
+        Body={<Resume />}
         Footer={<Footer id="" />}
       />
     </>

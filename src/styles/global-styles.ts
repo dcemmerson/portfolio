@@ -38,7 +38,7 @@ export const GlobalStyle = (theme: Theme) => createGlobalStyle`
     h2 {
       font-size: 1.6rem !important;
     }
-    h3 {
+    h3, .h3 {
       font-size: 1.1rem !important;
 		}
     div, p, a {
@@ -57,7 +57,7 @@ export const GlobalStyle = (theme: Theme) => createGlobalStyle`
     h2 {
       font-size: 1.8rem !important;
     }
-    h3 {
+    h3, .h3 {
       font-size: 1.1rem !important;
 		}
     div, p, a {
@@ -76,7 +76,7 @@ export const GlobalStyle = (theme: Theme) => createGlobalStyle`
     h2 {
       font-size: 2rem !important;
     }
-    h3 {
+    h3, .h3 {
       font-size: 1.2rem !important;
 		}
     div, p, a {
@@ -89,7 +89,7 @@ export const GlobalStyle = (theme: Theme) => createGlobalStyle`
     }
   }
   @media (min-width: 992px) {
-		h3 {
+		h3, .h3 {
       font-size: 1.3rem !important;
 		}
     footer {

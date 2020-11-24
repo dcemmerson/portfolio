@@ -29,19 +29,8 @@ export const MyTie = (props: Props) => {
                   <div className="text">
                     <p>
                       MyTie is a free mobile app targeting Android devices (for
-                      now at least).
-                    </p>
-                    <p>
-                      The goal of the project is to create a flexible mobile app
-                      for fly fishing that allows users to filter and search fly
-                      tying patterns based on materials the user has on hand.
-                      The app also allows users to upload additional fly
-                      patterns with photos and instructions to the app for other
-                      users to tie the fly.
-                    </p>
-                    <p>
-                      MyTie is currently in the early stages of development,
-                      being built with{' '}
+                      now at least). MyTie is currently in the early stages of
+                      development, being built with{' '}
                       <a
                         href="https://dart.dev/"
                         target="_blank"
@@ -65,7 +54,19 @@ export const MyTie = (props: Props) => {
                       >
                         Firebase <FiExternalLink />
                       </a>
-                      , but I hope to release an early version of the app on
+                      .
+                    </p>
+                    <p>
+                      The goal of the project is to create a flexible mobile app
+                      for fly fishing that allows users to filter and search fly
+                      tying patterns based on materials the user has on hand.
+                      The app also allows users to upload additional fly
+                      patterns with photos and instructions to the app for other
+                      users to tie the fly.
+                    </p>
+                    <p>
+                      While my primary goal with this project is to learn and
+                      grow, I do hope to release an early version of the app on
                       Google Play by the end of 2020.
                     </p>
                     <p>Updates to come...</p>
