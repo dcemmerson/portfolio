@@ -90,40 +90,47 @@ export const Navbar = (props: Props) => {
   );
 };
 
-const Wrapper = styled.div`\
-#visible {
-	position: absolute;
-	z-index: 100;
-	// display: none;
-}
-#invisible {
-	visibility: hidden;
-}
-	nav {
-		left: 0;
-		right: 0;
-		max-width: 100vw;
-		background-color: ${p => p.theme.navbarBackgroundColor};
-		border-bottom: 1px solid ${p => p.theme.border};
-		transition: top 0.4s;
-	}
-	ul {
-		display: flex;
-		flex-direction: row;
-	}
-	#themeSwitch__large, #themeSwitch__small {
-		align-self: center;
-	}
+const Wrapper = styled.div`
+  \ #visible {
+    position: absolute;
+    z-index: 100;
+    // display: none;
+  }
+  #invisible {
+    visibility: hidden;
+  }
+  nav {
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+    background-color: ${p => p.theme.navbarBackgroundColor};
+    border-bottom: 1px solid ${p => p.theme.border};
+    transition: top 0.4s;
+  }
 
-	@media (max-width: 768px) {
-		#themeSwitch__large {
-			display: none;
-		}
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+  #themeSwitch__large,
+  #themeSwitch__small {
+    align-self: center;
+  }
 
-	}
-	@media (min-width: 768px) {
-		#themeSwitch__small {
-			display: none;
-		}
-
+  @media (max-width: 768px) {
+    #themeSwitch__large {
+      display: none;
+    }
+    .nav-link {
+      padding: 0.5rem 0.6rem !important;
+    }
+  }
+  @media (min-width: 768px) {
+    #themeSwitch__small {
+      display: none;
+    }
+    .nav-link {
+      padding: 0.5rem 1rem;
+    }
+  }
 `;

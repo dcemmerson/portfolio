@@ -132,6 +132,10 @@ export const Projects = (props: Props) => {
                         </li>
                       </ul>
                     </p>
+                    <p className="sm secondary">
+                      Note: Link to source code not available as I signed a
+                      non-disclosure agreement to work on this project.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -243,5 +247,8 @@ const Wrapper = styled.div`
   }
   .subText {
     font-size: 90%;
+  }
+  .sm {
+    font-size: 75%;
   }
 `;
