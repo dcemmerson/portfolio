@@ -110,7 +110,7 @@ export const Projects = (props: Props) => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            Pace App <FiExternalLink />
+                            Website <FiExternalLink />
                           </a>{' '}
                         </div>
                       </div>
@@ -176,7 +176,7 @@ export const Projects = (props: Props) => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            cola.govapps.us <FiExternalLink />
+                            Website <FiExternalLink />
                           </a>
                           <span className="mx-2">|</span>
                           <a
@@ -243,6 +243,71 @@ export const Projects = (props: Props) => {
                             cola.govapps.us/about <FiExternalLink />
                           </a>
                           .
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="py-2">
+                <div className="row">
+                  <div className="col-12 ">
+                    <h2 className="mb-0 mb-md-2">
+                      <strong className="h4">Inventory Tracking App</strong>
+                    </h2>
+                  </div>
+                </div>
+                <div>
+                  <div className="ml-3 ml-md-4">
+                    <div className="row mb-2">
+                      <div className="col-sm-4 col-xs-12">
+                        {' '}
+                        <em className="secondary subText">Summer 2020</em>
+                      </div>
+                      <div className="col-sm-8 col-xs-12 justify-xs-content-start justify-content-sm-end d-flex">
+                        <div className="">
+                          <a
+                            className="subText text-nowrap"
+                            href="https://trackmyinventory.netlify.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Website <FiExternalLink />
+                          </a>
+                          <span className="mx-2">|</span>
+                          <a
+                            className="subText text-nowrap"
+                            href="https://github.com/dcemmerson/inventory_tracker"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Github <FiExternalLink />
+                          </a>{' '}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col">
+                        <p className="">
+                          I built this project with React.js on the front-end
+                          and a NoSQL database (FaunaDB) on the backend,
+                          deployed with Netlify.
+                        </p>
+                        <p className="">
+                          The inventory tracker web app is a project I built for
+                          a friend to keep track of his personal medical
+                          inventory.
+                        </p>
+                        <p className="">
+                          Check out a demo version at{' '}
+                          <a
+                            className="subText text-nowrap"
+                            href="https://trackmyinventory.netlify.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            TrackMyInventory.netlify.app <FiExternalLink />
+                          </a>
                         </p>
                       </div>
                     </div>
