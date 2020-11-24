@@ -140,6 +140,10 @@ export const Projects = (props: Props) => {
                             </li>
                           </ul>
                         </p>
+                        <p>
+                          The app is currently available in the Apple App Store
+                          and Garmin Connect IQ Store.
+                        </p>
                         <p className="sm secondary">
                           Note: Link to source code not available as I signed a
                           non-disclosure agreement to work on this project.

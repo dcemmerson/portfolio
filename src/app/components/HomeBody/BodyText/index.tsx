@@ -19,10 +19,10 @@ export const HomeBodyText = () => {
               I enjoy learning about and working on all things software. Please
               take a look at my{' '}
               <Link
-                to={PageType.Resume}
-                onClick={() => dispatch(changePage(PageType.Resume))}
+                to={PageType.Projects}
+                onClick={() => dispatch(changePage(PageType.Projects))}
               >
-                resume
+                projects
               </Link>{' '}
               and{' '}
               <Link
