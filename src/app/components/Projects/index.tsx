@@ -217,7 +217,7 @@ export const Projects = (props: Props) => {
                         </p>
 
                         <p className="">
-                          The app includes the following key functionallities:
+                          The app includes the following key functionalities:
                           <ul>
                             <li>
                               Detect changes in COLA rates by scraping and
