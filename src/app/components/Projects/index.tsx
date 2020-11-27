@@ -318,6 +318,119 @@ export const Projects = (props: Props) => {
                   </div>
                 </div>
               </div>
+              <div className="py-2">
+                <div className="row">
+                  <div className="col-12 ">
+                    <h2 className="mb-0 mb-md-2">
+                      <strong className="h4">Chess with JavaFX</strong>
+                    </h2>
+                  </div>
+                </div>
+                <div>
+                  <div className="ml-3 ml-md-4">
+                    <div className="row mb-2">
+                      <div className="col-sm-4 col-xs-12">
+                        {' '}
+                        <em className="secondary subText">Spring 2020</em>
+                      </div>
+                      <div className="col-sm-8 col-xs-12 justify-xs-content-start justify-content-sm-end d-flex">
+                        <div className="">
+                          <a
+                            className="subText text-nowrap"
+                            href="https://github.com/dcemmerson/chess---javafx"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Github <FiExternalLink />
+                          </a>{' '}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col">
+                        <p className="">
+                          I built a chess game written in Java and a graphical
+                          user interface with the JavaFX library.
+                        </p>
+                        <p>
+                          This chess implementation offers 4 different versions
+                          of game play:
+                          <ul>
+                            <li>
+                              2 Player local game - players take turns on a
+                              single machine
+                            </li>
+                            <li>
+                              2 player remote game - connect over a network to
+                              another player
+                            </li>
+                            <li>
+                              1 player vs computer - play again the computer
+                            </li>
+                            <li>
+                              Computer vs computer - watch the computer play
+                              itself
+                            </li>
+                          </ul>
+                        </p>
+                        <p>
+                          Checkout the{' '}
+                          <a
+                            className="subText text-nowrap"
+                            href="https://github.com/dcemmerson/chess---javafx"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Github repo <FiExternalLink />
+                          </a>{' '}
+                          for a demo!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="py-2">
+                <div className="row">
+                  <div className="col-12 ">
+                    <h2 className="mb-0 mb-md-2">
+                      <strong className="h4">Client Server Chat</strong>
+                    </h2>
+                  </div>
+                </div>
+                <div>
+                  <div className="ml-3 ml-md-4">
+                    <div className="row mb-2">
+                      <div className="col-sm-4 col-xs-12">
+                        {' '}
+                        <em className="secondary subText">Winter 2020</em>
+                      </div>
+                      <div className="col-sm-8 col-xs-12 justify-xs-content-start justify-content-sm-end d-flex">
+                        <div className="">
+                          <a
+                            className="subText text-nowrap"
+                            href="https://github.com/dcemmerson/CS372/tree/master/Project1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Github <FiExternalLink />
+                          </a>{' '}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col">
+                        <p className="">
+                          This project is a multithreaded client-server,
+                          terminal to terminal chat program written in C and
+                          Python with a user interface created with the curses
+                          library.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
