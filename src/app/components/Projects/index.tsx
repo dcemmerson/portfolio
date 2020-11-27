@@ -532,7 +532,7 @@ export const Projects = (props: Props) => {
                     <div className="row">
                       <div className="col">
                         <p className="">
-                          I built this drawing program with a team for a
+                          I built this drawing program with a teammate for a
                           database course at Oregon State University.
                         </p>
                         <p>
