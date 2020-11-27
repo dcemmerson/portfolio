@@ -89,7 +89,8 @@ export const About = (props: Props) => {
                         rel="noopener noreferrer"
                       >
                         Pace App <FiExternalLink />
-                      </a>{' '}
+                      </a>
+                      .
                     </p>
                   </div>
                 </div>

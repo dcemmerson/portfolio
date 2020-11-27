@@ -431,6 +431,135 @@ export const Projects = (props: Props) => {
                   </div>
                 </div>
               </div>
+              <div className="py-2">
+                <div className="row">
+                  <div className="col-12 ">
+                    <h2 className="mb-0 mb-md-2">
+                      <strong className="h4">Tetris</strong>
+                    </h2>
+                  </div>
+                </div>
+                <div>
+                  <div className="ml-3 ml-md-4">
+                    <div className="row mb-2">
+                      <div className="col-sm-4 col-xs-12">
+                        {' '}
+                        <em className="secondary subText">Fall 2019</em>
+                      </div>
+                      <div className="col-sm-8 col-xs-12 justify-xs-content-start justify-content-sm-end d-flex">
+                        <div className="">
+                          <a
+                            className="subText text-nowrap"
+                            href="https://demedia.app/tetris"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Website <FiExternalLink />
+                          </a>
+                          <span className="mx-2">|</span>
+                          <a
+                            className="subText text-nowrap"
+                            href="https://github.com/dcemmerson/tetris"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Github <FiExternalLink />
+                          </a>{' '}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col">
+                        <p className="">
+                          I built a tetris game for fun, written in JavaScript
+                          and Bootstrap with a MySQL database on the back-end
+                          for keeping track of custom user created pieces and
+                          high scores.
+                        </p>
+                        <p>
+                          Give it a try{' '}
+                          <a
+                            className="subText text-nowrap"
+                            href="https://demedia.app/tetris"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            here <FiExternalLink />.
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="py-2">
+                <div className="row">
+                  <div className="col-12 ">
+                    <h2 className="mb-0 mb-md-2">
+                      <strong className="h4">Monsters Drawing</strong>
+                    </h2>
+                  </div>
+                </div>
+                <div>
+                  <div className="ml-3 ml-md-4">
+                    <div className="row mb-2">
+                      <div className="col-sm-4 col-xs-12">
+                        {' '}
+                        <em className="secondary subText">Spring 2019</em>
+                      </div>
+                      <div className="col-sm-8 col-xs-12 justify-xs-content-start justify-content-sm-end d-flex">
+                        <div className="">
+                          <a
+                            className="subText text-nowrap"
+                            href="https://demedia.app/monsters"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Website <FiExternalLink />
+                          </a>
+                          <span className="mx-2">|</span>
+                          <a
+                            className="subText text-nowrap"
+                            href="https://github.com/dcemmerson/monsters340"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Github <FiExternalLink />
+                          </a>{' '}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col">
+                        <p className="">
+                          I built this drawing program with a team for a
+                          database course at Oregon State University.
+                        </p>
+                        <p>
+                          We built this with JavaScript and Bootstrap on the
+                          front-end and Node.js, MySQL, and Handlebars on the
+                          back-end. This project features CRUD (create, read,
+                          update, delete) functionallity and a user account
+                          system.
+                        </p>
+                        <p>
+                          Give it a try{' '}
+                          <a
+                            className="subText text-nowrap"
+                            href="https://demedia.app/monsters"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            here <FiExternalLink />
+                          </a>{' '}
+                          and create an account, or select the 'user without
+                          account' option.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
