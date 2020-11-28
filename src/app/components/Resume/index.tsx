@@ -121,7 +121,7 @@ export const Resume = (props: Props) => {
                   <h3 className="mb-1">
                     <strong>VSFS with Department of State</strong>
                   </h3>
-                  <span className="text">Intern - Sept 2020 to June 2020</span>
+                  <span className="text">Intern - Sept 2019 to June 2020</span>
                 </div>
                 <div className="ml-3 ml-md-4">
                   <div className="text">
