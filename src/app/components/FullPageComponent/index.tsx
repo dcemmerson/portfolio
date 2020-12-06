@@ -24,7 +24,6 @@ export const FullPageComponent = (props: Props) => {
   // button, as we need to make sure the window location matches
   // the current selected page.
   if (getSelectedPageFromWindow() !== selectedPageType.selected) {
-    console.log('wrong page');
     dispatch(changePage(getSelectedPageFromWindow()));
   }
 

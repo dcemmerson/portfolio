@@ -36,8 +36,6 @@ export const Navbar = (props: Props) => {
     dispatch(changePage(pageType));
   };
 
-  console.log('re-rendering navbar');
-
   return (
     <Wrapper>
       <nav
