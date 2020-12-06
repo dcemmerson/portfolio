@@ -13,7 +13,7 @@ export function MyTiePage() {
     <>
       <Helmet>
         <title>Dane Emmerson</title>
-        <meta name="description" content="Dane Emmerson" />
+        <meta name="MyTie Page Description" content="MyTie - Dane Emmerson" />
       </Helmet>
       <FullPageComponent
         Header={<Navbar id="" />}

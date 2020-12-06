@@ -11,7 +11,7 @@ export function HomePage() {
     <>
       <Helmet>
         <title>Dane Emmerson</title>
-        <meta name="description" content="Dane Emmerson" />
+        <meta name="Dane Emmerson Home Page" content="Dane Emmerson" />
       </Helmet>
       <FullPageComponent
         Header={<Navbar id="" labels={[]} />}

@@ -13,7 +13,7 @@ export function AboutPage() {
     <>
       <Helmet>
         <title>Dane Emmerson</title>
-        <meta name="description" content="Dane Emmerson" />
+        <meta name="Dane Emmerson About Page" content="Dane Emmerson" />
       </Helmet>
       <FullPageComponent
         Header={<Navbar id="" />}

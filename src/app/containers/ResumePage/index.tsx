@@ -13,7 +13,7 @@ export function PortfolioPage() {
     <>
       <Helmet>
         <title>Dane Emmerson</title>
-        <meta name="description" content="Dane Emmerson" />
+        <meta name="resume" content="Dane Emmerson" />
       </Helmet>
       <FullPageComponent
         Header={<Navbar id="" />}
