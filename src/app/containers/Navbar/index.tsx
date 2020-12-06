@@ -36,13 +36,15 @@ export const Navbar = (props: Props) => {
     dispatch(changePage(pageType));
   };
 
+  console.log('re-rendering navbar');
+
   return (
     <Wrapper>
       <nav
         className="row justify-content-around mx-lg-5 mx-md-4 mx-2 pt-3"
         id={props.visible ? 'visible' : 'invisible'}
       >
-        <div className="col-12 col-md-5 justify-content-between justify-content-md-start d-flex px-4 px-md-2">
+        <div className="col-12 col-lg-5 justify-content-between justify-content-lg-start d-flex px-4 px-md-2">
           <NavTitle
             label="Dane Emmerson"
             to="/"
@@ -52,7 +54,7 @@ export const Navbar = (props: Props) => {
             <ThemeSwitch />
           </span>
         </div>
-        <div className="col-12 col-md-7 d-flex justify-content-center justify-content-md-end">
+        <div className="col-12 col-lg-7 d-flex justify-content-center justify-content-lg-end">
           <span>
             <ul className="mr-auto">
               <NavItem
@@ -91,7 +93,7 @@ export const Navbar = (props: Props) => {
 };
 
 const Wrapper = styled.div`
-  \ #visible {
+  #visible {
     position: absolute;
     z-index: 100;
     // display: none;
@@ -117,7 +119,7 @@ const Wrapper = styled.div`
     align-self: center;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     #themeSwitch__large {
       display: none;
     }
@@ -125,9 +127,20 @@ const Wrapper = styled.div`
       padding: 0.5rem 0.6rem !important;
     }
   }
-  @media (min-width: 768px) {
+  // @media (min-width: 768px) {
+  //   #themeSwitch__large {
+  //     display: none;
+  //   }
+  //   .nav-link {
+  //     padding: 0.5rem 1rem;
+  //   }
+  // }
+  @media (min-width: 992px) {
     #themeSwitch__small {
       display: none;
+    }
+    #themeSwitch__large {
+      display: flow;
     }
     .nav-link {
       padding: 0.5rem 1rem;
