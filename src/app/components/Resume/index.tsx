@@ -30,7 +30,7 @@ export const Resume = (props: Props) => {
                     </h3>
                   </div>
                   <div className="col-12 col-md-5 col-lg-6 col-xl-7 align-content-center d-flex">
-                    <span className="sm">(2018 to present)</span>
+                    <span className="sm text-nowrap">(2018 to present)</span>
                   </div>
                 </div>
                 <div className="ml-3 ml-md-4">
@@ -47,9 +47,8 @@ export const Resume = (props: Props) => {
                       <strong>University of California, Davis</strong>
                     </h3>
                   </div>
-
                   <div className="col-12 col-md-5 col-lg-6 col-xl-7 align-content-center d-flex">
-                    <span className="sm">(2008 to 2012)</span>
+                    <span className="sm text-nowrap">(2008 to 2012)</span>
                   </div>
                 </div>
                 <div className="ml-3 ml-md-4">
