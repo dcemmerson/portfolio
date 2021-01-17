@@ -67,17 +67,20 @@ export const Resume = (props: Props) => {
                     <h3>
                       <strong>Technologies</strong>
                     </h3>
-                    <div className="skill">JavaScript</div>
-                    <div className="skill">TypeScript</div>
-                    <div className="skill">Node.js</div>
-                    <div className="skill">React.js</div>
-                    <div className="skill">Dart</div>
-                    <div className="skill">Flutter</div>
-                    <div className="skill">Java</div>
-                    <div className="skill">SQL and NoSQL</div>
-                    <div className="skill">Serverless</div>
-                    <div className="skill">HTML</div>
-                    <div className="skill">CSS</div>
+                    <ul className="skillList">
+                      <li className="skill">JavaScript</li>
+                      <li className="skill">TypeScript</li>
+                      <li className="skill">Node.js</li>
+                      <li className="skill">React.js</li>
+                      <li className="skill">Dart</li>
+                      <li className="skill">Flutter</li>
+                      <li className="skill">Java</li>
+                      <li className="skill">SQL</li>
+                      <li className="skill">NoSQL</li>
+                      <li className="skill">HTML</li>
+                      <li className="skill">CSS</li>
+                      <li className="skill">Serverless</li>
+                    </ul>
                   </div>
                 </div>
                 <div className="col-6 d-flex justify-content-center">
@@ -201,6 +204,20 @@ export const Resume = (props: Props) => {
 };
 
 const Wrapper = styled.div`
+  .skillList {
+    list-style: none;
+    padding: 0;
+  }
+  .skillList .skill {
+    display: inline-block;
+    whitespace: nowrap;
+
+    &:not(:last-child)::after {
+      content: '·';
+      margin: 0 0.3rem;
+    }
+  }
+
   @media (max-width: 600px) {
     .sm {
       font-size: 0.75rem !important;
