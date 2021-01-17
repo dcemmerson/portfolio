@@ -38,9 +38,8 @@ export const About = (props: Props) => {
                       and computer science in general. After years of dabbling
                       into programming on my own, I finally decided to follow my
                       passion and enrolled in the postbaccalaureate computer
-                      science program at Oregon State University. I will be
-                      graduating in December 2020 with a Bachelor of Science in
-                      computer science.
+                      science program at Oregon State University. I recently
+                      graduated and accepted a new position.
                     </p>
                     <p>
                       While I enjoy software projects of all types, I have an
@@ -72,9 +71,9 @@ export const About = (props: Props) => {
                       library.
                     </p>
                     <p>
-                      These days, in addition to my coursework and teaching
-                      responsibilities at Oregon State University, I spend the
-                      remainder of my time working on two different mobile apps,{' '}
+                      These days, although most my time is spent at Ezoic, I
+                      spend the remainder of my time working on two different
+                      mobile apps,{' '}
                       <Link
                         to={PageType.MyTie}
                         onClick={() => dispatch(changePage(PageType.MyTie))}
