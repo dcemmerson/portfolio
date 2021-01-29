@@ -104,7 +104,7 @@ export const Resume = (props: Props) => {
                     <strong>Ezoic</strong>
                   </h3>
                   <span className="text">
-                    Software Engineer - Jan 2020 to present
+                    Software Engineer - Jan 2021 to present
                   </span>
                 </div>
                 <div className="ml-3 ml-md-4">

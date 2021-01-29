@@ -18,7 +18,7 @@ export const FooterBody = memo(() => {
             </p>
           </div>
           <div className="col-md-4 col-sm-6 col-xs-12 d-flex justify-content-center">
-            <p className="sm">Last updated: January 2020</p>
+            <p className="sm">Last updated: January 2021</p>
           </div>
           <div className="col-md-4 col-12 d-flex justify-content-center">
             <p>
