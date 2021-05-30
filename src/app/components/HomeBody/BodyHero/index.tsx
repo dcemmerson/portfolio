@@ -4,20 +4,21 @@ import inca_trail from 'assets/inca_trail.jpg';
 
 export const HomeBodyHero = () => {
   const [isLoaded, setLoaded] = useState(false);
-  const placeHolder = (
-    <ImageTextWrapper className={isLoaded ? 'hidden' : ''}>
-      <h1>Hello. I'm Dane, a software developer.</h1>
-    </ImageTextWrapper>
-  );
+  // const placeHolder = (
+  //   <ImageTextWrapper className={isLoaded ? 'hidden' : ''}>
+  //     <h1>Hello. I'm Dane, a software developer.</h1>
+  //   </ImageTextWrapper>
+  // );
 
   return (
     <div className="container pt-5 pb-3 pb-md-4 py-lg-5">
       <div className="row">
-        {!isLoaded && placeHolder}
+        {/* {!isLoaded && placeHolder} */}
         <ImageWrapper>
           <img
             src={inca_trail}
-            alt={isLoaded ? 'Inca trail' : ''}
+            alt="Inca trail"
+            // alt={isLoaded ? 'Inca trail' : ''}
             onLoad={() => setLoaded(true)}
           />
           <ImageTextWrapper>
@@ -37,7 +38,7 @@ const ImageWrapper = styled.div`
   justify-content: center;
   z-index: 0;
   min-height: calc(
-    100% * 6.96 / 19.14
+    60vw * 6.96 / 19.14
   ); /* 6.96 / 19.14 are image ratios - asset should be resized */
   img {
     filter: grayscale(40%);
