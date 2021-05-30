@@ -17,6 +17,9 @@ const ImageWrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  min-height: calc(
+    100% * 6.96 / 19.14
+  ); /* 6.96 / 19.14 are image ratios - asset should be resized */
   z-index: 0;
   img {
     filter: grayscale(40%);
