@@ -117,6 +117,12 @@ const Wrapper = styled.div`
     align-self: center;
   }
 
+  @media (max-width: 600px) {
+    nav a {
+      font-size: 0.9rem;
+    }
+  }
+
   @media (max-width: 992px) {
     #themeSwitch__large {
       display: none;
