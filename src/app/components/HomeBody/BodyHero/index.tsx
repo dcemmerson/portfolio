@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
-import inca_trail from 'assets/inca_trail.jpg';
+import inca_trail from 'assets/inca_trail.webp';
 
 export const HomeBodyHero = () => {
   const [isLoaded, setLoaded] = useState(false);
