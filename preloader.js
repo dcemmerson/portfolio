@@ -10,6 +10,7 @@ let fileWithPreload = [parts[0], splitBy];
 
 const pathToMedia = './build/static/media/';
 const lcpRegex = /^inca_trail\.\w+\.webp/g;
+const fontRegex = /^Montserrat-Regular\.\w+\.woff2/g;
 const relPathArr = pathToMedia.split('build');
 const relPath = relPathArr[relPathArr.length - 1];
 
@@ -21,6 +22,11 @@ try {
       fileWithPreload = [
         ...fileWithPreload,
         `<link rel="preload" href="${relPath}${filename}" as="image">`,
+      ];
+    } else if (fontRegex.test(filename)) {
+      fileWithPreload = [
+        ...fileWithPreload,
+        `<link rel="preload" href="${relPath}${filename}" as="font">`,
       ];
     }
   });
