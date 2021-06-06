@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { readdir } = require('fs/promises');
+// const { readdir } = require('fs/promises');
 
 const pathToEntry = './build/index.html';
 const splitBy = '</title>';
@@ -13,18 +13,20 @@ const lcpRegex = /^inca_trail\.\w+\.webp/g;
 const relPathArr = pathToMedia.split('build');
 const relPath = relPathArr[relPathArr.length - 1];
 
-readdir(pathToMedia)
-  .then(files => {
-    files.forEach(filename => {
-      if (lcpRegex.test(filename)) {
-        fileWithPreload = [
-          ...fileWithPreload,
-          `<link rel="preload" href="${relPath}${filename}" as="image">`,
-        ];
-      }
-    });
+try {
+  const files = fs.readdirSync(pathToMedia);
 
-    fileWithPreload = [...fileWithPreload, parts[1]];
-    fs.writeFileSync(pathToEntry, fileWithPreload.join(''));
-  })
-  .catch(err => console.error(err));
+  files.forEach(filename => {
+    if (lcpRegex.test(filename)) {
+      fileWithPreload = [
+        ...fileWithPreload,
+        `<link rel="preload" href="${relPath}${filename}" as="image">`,
+      ];
+    }
+  });
+
+  fileWithPreload = [...fileWithPreload, parts[1]];
+  fs.writeFileSync(pathToEntry, fileWithPreload.join(''));
+} catch (err) {
+  console.error(err);
+}
