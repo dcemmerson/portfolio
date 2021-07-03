@@ -5,7 +5,8 @@ import { Theme } from './theme/themes';
 export const GlobalStyle = (theme: Theme) => createGlobalStyle`
 
 	body, div, span, p, a {
-		font-family: Montserrat, sans-serif, Georiga, Serif;
+		font-family: Montserrat, helvetica, sans-serif, Serif;
+    // font-family: verdana;
   }
   
   html,

@@ -1,5 +1,7 @@
 @font-face {
-  font-family: 'Montserrat';    
+	font-family: 'Montserrat'; //, sans-serif, Georiga, Serif;
 	src: url(../../assets/Montserrat-Regular.woff2) format("woff2");
-	font-display: swap;
+	// font-display: swap;
+	font-display: optional;
+
 }
